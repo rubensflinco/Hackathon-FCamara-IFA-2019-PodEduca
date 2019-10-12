@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class ParticipanteController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index(Request $request) {
         $participantes = $this->listar();
 

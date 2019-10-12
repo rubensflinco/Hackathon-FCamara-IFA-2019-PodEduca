@@ -7,7 +7,7 @@
             <div class="container">
                 <h3>Participantes</h3>
                 <br/>
-
+              <a href="/dashboard/participante/criar">Cadastrar participante</a>
               <table class="table">
                 <thead>
                   <tr>
