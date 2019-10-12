@@ -2,11 +2,15 @@
     <div class="carousel-col">
 
         <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail animated zoomInUp">
+            <div class="thumbnail">
             <img class="img-responsive" src="{{$img}}" />
                 <div class="caption">
-                    <h3>{{$titulo}}</h3>
-                    <p>{{$descricao}}</p>
+                    @if ($titulo)
+                        <h3>{{$titulo}}</h3>
+                    @endif
+                    @if ($descricao)
+                        <p>{{$descricao}}</p>
+                    @endif
                     {{-- <br />
                     <center>
                     <a href="@yield('btnLink.carousel.thumbnail')" class="btn @yield('classBtn.carousel.thumbnail')" target="_blank" role="button">@yield('btnTitulo.carousel.thumbnail')</a>
