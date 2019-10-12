@@ -8,7 +8,7 @@
     <div class="container">
       <ol class="breadcrumb fundo-transparente">
           <li><a href="/">Home</a></li>
-          <li class="active"><a href="#">Instituições</a></li>
+          <li class="active">Instituições</li>
           
           <a class="btn btn-warning btn-md pull-right" href="/dashboard/instituicao/cadastrar">Cadastrar instituição</a>
           <br/><br/>

@@ -182,11 +182,11 @@ h1{
 
 .form-black .form-control:-ms-input-placeholder,
 .form-black .form-control::-ms-input-placeholder { 
-    color: #000!important;
+    color: #444!important;
 }
 
 .form-black .form-control::placeholder { 
-    color: #000!important;
+    color: #444!important;
     opacity: 1!important;
 }
 
