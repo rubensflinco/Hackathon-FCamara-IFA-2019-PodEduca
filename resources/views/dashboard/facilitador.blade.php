@@ -2,9 +2,9 @@
 @section('menu', true)
 @section('conteudo')
 
-<div className="separacao-transparente">
-        <div className="row">
-            <div className="container">
+<div class="separacao-transparente">
+        <div class="row">
+            <div class="container">
 
                 <h3>Facilitador</h3>
 
