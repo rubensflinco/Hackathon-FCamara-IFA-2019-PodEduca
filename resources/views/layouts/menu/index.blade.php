@@ -43,7 +43,8 @@
 
   <nav class="navbar navbar-gradient navbar-top scrolled navbar-fixed-top">
     <div class="container">
-      @extends('layouts.menu.desktop.cima')
+
+      @include('layouts.menu.desktop.cima')
 
       @extends('layouts.menu.mobile.baixo')
       @section('conteudo.menu.mobile.baixo')
