@@ -21,3 +21,34 @@ function fecharForm(){
   document.getElementById("form").style.height = "0";
   document.getElementById("form").style.bottom = "-1000px";
 }
+
+function AtivarCarouselMulti() {
+  if (!$('.carousel[data-type="multi"] .item.AtivarCarouselMulti').text()) {
+      $('.carousel[data-type="multi"] .item').each(function () {
+          $(this).addClass('AtivarCarouselMulti');
+          var next = $(this).next();
+          if (!next.length) {
+              next = $(this).siblings(':first');
+          }
+          next.children(':first-child').clone().appendTo($(this));
+
+          for (var i = 0; i < 2; i++) {
+              next = next.next();
+              if (!next.length) {
+                  next = $(this).siblings(':first');
+              }
+
+              next.children(':first-child').clone().appendTo($(this));
+          }
+      });
+      $(document).ready(function () {
+          $(".carousel").swipe({
+              swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+                  if (direction === 'left') $(this).carousel('next');
+                  if (direction === 'right') $(this).carousel('prev');
+              },
+              allowPageScroll: "vertical"
+          });
+      });
+  }
+}

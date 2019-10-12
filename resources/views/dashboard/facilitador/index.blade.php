@@ -26,6 +26,25 @@
                     </div>
                   </div>
 
+                  @php $idCarousel = rand(1,1000) @endphp
+                  @include('layouts.carousel.carousel', ['local' => 'top', 'id' => $idCarousel])
+
+                    @include('layouts.carousel.thumbnail.thumbnail', [
+                      'classItem' => 'active',
+                      'titulo' => 'Test1',
+                      'img' => 'https://img.onesignal.com/t/249c9781-ba49-499e-a5be-c799240aa800.png',
+                      'descricao' => 'Olá'
+                    ])
+                    
+
+                    @include('layouts.carousel.thumbnail.thumbnail', [
+                      'classItem' => ' ',
+                      'titulo' => 'Test2',
+                      'img' => 'https://img.onesignal.com/t/249c9781-ba49-499e-a5be-c799240aa800.png',
+                      'descricao' => 'Olá'
+                    ])
+                  
+                  @include('layouts.carousel.carousel', ['local' => 'bottom', 'id' => $idCarousel])
 
                   <a href="{{ route('instituicao.cadastrar') }}" >
                     Cad Inst
