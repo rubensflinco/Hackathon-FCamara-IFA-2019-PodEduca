@@ -16,7 +16,7 @@ class CriarTabelaEncontro extends Migration
         Schema::create('encontro', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('facilitador_id');
-            $table->unsignedInteger('participante_id');
+            $table->string('participante_id');
             $table->unsignedInteger('campanha_id');
             $table->unsignedInteger('poder_id');
             $table->date('data');
