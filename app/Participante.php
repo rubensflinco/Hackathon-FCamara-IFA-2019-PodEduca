@@ -12,7 +12,7 @@ class Participante extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'id', 'nome', 'nick', 'senha','data_nascimento', 'genero', 'grupo'
+        'id', 'nome', 'nick', 'senha','data_nascimento', 'genero', 'grupo', 'facilitador_id'
     ];
 
 }

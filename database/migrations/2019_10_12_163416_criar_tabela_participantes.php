@@ -21,6 +21,7 @@ class CriarTabelaParticipantes extends Migration
             $table->string('grupo');
             $table->date('data_nascimento');
             $table->string('genero');
+            $table->unsignedInteger('facilitador_id');
         });
     }
 
