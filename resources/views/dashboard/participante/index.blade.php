@@ -7,7 +7,7 @@
             <div class="container">
 
                     <center>
-                        <h3>Olá {NOME}, tudo bem ?</h3>
+                        <h3>Olá {{@Auth::user()->name}}, tudo bem ?</h3>
                         <br/>
                     </center>
                   

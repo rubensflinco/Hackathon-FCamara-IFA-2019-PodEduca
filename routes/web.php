@@ -30,3 +30,6 @@ Route::get('/register', function () {
 
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard/turmas', function () {
+    return view('dashboard.facilitador.turmas');
+});

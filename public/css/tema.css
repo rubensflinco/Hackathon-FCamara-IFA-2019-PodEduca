@@ -222,9 +222,6 @@ p{
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
 }
-.sumir, .table {
-    opacity: 0;
-}
 .bg-default{
     color: #333;
     background-color: #ccc;
