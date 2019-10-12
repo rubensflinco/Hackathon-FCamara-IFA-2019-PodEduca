@@ -1,5 +1,6 @@
 @extends('layouts.default')
 @section('menu', true)
+@section('dashboard', true)
 @section('conteudo')
 
 <div class="separacao-transparente">

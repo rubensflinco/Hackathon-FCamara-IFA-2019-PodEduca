@@ -16,7 +16,7 @@
     transition: 1s;
 }
 
-body{
+.dashboard{
     font-family: 'Montserrat', sans-serif;
     margin: 0 !important;
     padding-bottom: 74px;
@@ -60,10 +60,10 @@ h1{
         transform: translate(-50%,-50%);
 }
 .navbar-gradient{
-    background-color: rgba(238, 238, 238, 0.5);
+    background-color: #f16227;
     border-bottom: 1px #eeeeee solid;
 }
-body{
+.dashboard{
     padding-top: 30px;
 }
 
@@ -78,7 +78,7 @@ body{
     background-color: transparent;
     border-bottom: 1px transparent solid;
 }
-body{
+.dashboard{
     padding-top: 0px;
 }
 .navbar-right {
@@ -86,7 +86,11 @@ body{
     box-shadow: none;
 }
 #navbar {
-    background-color: rgba(238, 238, 238, 0.5);
+    background-color: #f16227!important;
+}
+#navbar p,
+#navbar i{
+    color: #fff;
 }
 }
 
@@ -110,21 +114,12 @@ body{
     width: 100%;
 }
 
-.painel{
-    border: 1px solid #6d586d;
-    border-radius: 20px;
-    box-shadow: 0 3px 3px #6d586d;
-    padding: 10px;
-}
-
-
-
 .margin{
     margin: 5px 0 !important;
 }
 
 .bg-inicio{
-    background: #c78fc7;
+    background: #f16227;
 }
 
 .separacao-ou{
@@ -172,18 +167,25 @@ body{
 }
   
 .form-control:-ms-input-placeholder,
-.form-control::-ms-input-placeholder,
+.form-control::-ms-input-placeholder { 
+    color: #fff!important;
+}
+
 .form-control::placeholder { 
-    color: #fff;
-    opacity: 1;
+    color: #fff!important;
+    opacity: 1!important;
 }
 
 .form-black .form-control:-ms-input-placeholder,
-.form-black .form-control::-ms-input-placeholder,
-.form-black .form-control::placeholder { 
-    color: #000;
-    opacity: 1;
+.form-black .form-control::-ms-input-placeholder { 
+    color: #000!important;
 }
+
+.form-black .form-control::placeholder { 
+    color: #000!important;
+    opacity: 1!important;
+}
+
 .form-black .form-control{
     border-bottom: rgba(000, 000, 000, 0.5) 2px solid!important;
     color: #000!important;
@@ -199,7 +201,7 @@ body{
 }
 
 @media (max-width: 768px){
-    body{
+    .dashboard{
         padding-bottom: 74px;
     }
 
@@ -215,4 +217,22 @@ body{
     .card{
         width: 100%;
     }
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #f16227;
+}
+::selection {
+    color: #fff;
+    background: #f16227; 
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background: #f16227;
+}
+::-webkit-scrollbar-track {
+    background: #ccc;
 }
