@@ -41,9 +41,10 @@ Route::get('/dashboard/turma/presenca/lancar', 'TurmaController@presenca');
 Route::post('/dashboard/turma/cadastrar', 'TurmaController@cadastrar');
 
 
-Route::get('/register/teste', function () {
-    return view('participante.criar');
+Route::get('/dashboard/participante/criar', function () {
+    return view('dashboard.facilitador.participante.criar');
 });
+Route::post('/dashboard/participante/criar', 'ParticipanteController@cadastrar');
 
 
 

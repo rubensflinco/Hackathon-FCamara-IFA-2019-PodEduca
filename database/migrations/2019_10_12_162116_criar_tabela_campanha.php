@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaEncontro extends Migration
+class CriarTabelaCampanha extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,10 @@ class CriarTabelaEncontro extends Migration
      */
     public function up()
     {
-        Schema::create('encontro', function (Blueprint $table) {
+        Schema::create('campanha', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('facilitador_id');
+            $table->string('nome');
             $table->unsignedInteger('participante_id');
-            $table->unsignedInteger('campanha_id');
-            $table->unsignedInteger('poder_id');
-            $table->date('data');
-            $table->string('missao');
-            $table->string('avaliacao');
-            $table->boolean('presente');
         });
     }
 
@@ -33,6 +27,6 @@ class CriarTabelaEncontro extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('encontro');
+        Schema::dropIfExists('campanha');        
     }
 }
