@@ -46,16 +46,22 @@ Route::get('/dashboard/participante/criar', function () {
 
 //Rotas para Facilitadores
 //Participantes
+Route::get('/dashboard/participante/criar', 'ParticipanteController@cadastrarForm')->name('participante.cadastrar');
 Route::post('/dashboard/participante/criar', 'ParticipanteController@cadastrar');
-Route::get('/dashboard/participante/listar', 'ParticipanteController@index');
+Route::get('/dashboard/participante/listar', 'ParticipanteController@index')->name('participante.listar');
+Route::get('/dashboard/participante/editar/{id}', 'ParticipanteController@editarForm');
+Route::post('/dashboard/participante/editar/{id}', 'ParticipanteController@editar');
 
 //Rotas para Admin
+
+//Rotas para instituição
 Route::get('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrarForm')->name('instituicao.cadastrar');
 Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrar');
 Route::get('/dashboard/instituicao/listar', 'InstituicaoController@index')->name('instituicao.listar');
 Route::delete('/dashboard/instituicao/remover/{id}', 'InstituicaoController@remover');
 Route::get('/dashboard/instituicao/editar/{id}', 'InstituicaoController@editarForm');
 Route::post('/dashboard/instituicao/editar/{id}', 'InstituicaoController@editar');
+//Rotas para facilitadores
 
 
 

@@ -1,17 +1,17 @@
 <form method="post">
 @csrf
     <label>Nome</label>
-    <input type="text" name="nome" id="nome">
+    <input value="{{ $participante->nome }}" type="text" name="nome" id="nome">
     <label>Nick</label>
-    <input type="text" name="nick" id="nick">
+    <input value="{{ $participante->nick }}" type="text" name="nick" id="nick">
     <label>Genero</label>
-    <select id="genero" name="genero">
+    <select value="{{ $participante->genero }}" id="genero" name="genero">
         <option value="masculino">Masculino</option>
         <option value="ferminino">Feminino</option>
     </select>
         <label>Data de nascimento</label>
-        <input type="date" name="data_nascimento" id="data_nascimento">
+        <input value="{{ $participante->date }}" type="date" name="data_nascimento" id="data_nascimento">
         <label>senha</label>
-        <input type="password" name="senha" id="senha">
+        <input value="{{ $participante->password }}" type="password" name="senha" id="senha">
     <button type="submit">Cadastrar</button>
 </form>

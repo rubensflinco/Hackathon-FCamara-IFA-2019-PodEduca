@@ -19,7 +19,7 @@ class CriarTabelaInstituicao extends Migration
             $table->string('cep');
             $table->string('logradouro');
             $table->string('numero');
-            $table->string('complemento');
+            $table->string('complemento')->nullable();
             $table->string('bairro');
             $table->string('localidade');
             $table->string('uf');

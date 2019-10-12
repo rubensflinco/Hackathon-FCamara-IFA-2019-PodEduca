@@ -25,9 +25,22 @@
                     <td>{{ $participante->nick }}</td>
                     <td>
                       <a class="btn btn-info btn-circle"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-                      <a class="btn btn-warning btn-circle"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                      <a class="btn btn-danger btn-circle"><i class="fa fa-times" aria-hidden="true"></i></a>
-                    </td>
+                      <form style="display: inline" method="post" action="/dashboard/participante/editar/{{ $participante->id }}">
+                      @csrf
+                      @method('GET')
+                            <button class="btn btn-circle btn-circle">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                            </button>
+                    </form>
+                      <form style="display: inline" method="post" action="/dashboard/participante/remover/{{ $participante->id }}"
+                      onsubmit="return confirm('Tem certeza que deseja remover {{addslashes($participante->nome)}}')">
+                      @csrf
+                      @method('DELETE')
+                            <button class="btn btn-danger btn-circle">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                    </form>
+                  </td>
                   </tr>
                 </tbody>
                 @endforeach
