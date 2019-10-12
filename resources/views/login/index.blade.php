@@ -21,6 +21,11 @@
         <a href="#" class="sair" onclick="fecharForm()">&times;</a>
         <form method="POST" action="{{ route('login') }}">
         @csrf
+        @if(!empty($message))
+            <div class="alert alert-danger">
+                {{ $message }}
+            </div>
+        @endif
             <div class="form-group">
                 <label>Digite seu E-mail:</label>
                 <input class="form-control" id="email" type="email" placeholder="Digite seu e-mail"  name="email">
@@ -29,7 +34,7 @@
                 <label>Digite seu E-mail:</label>
                 <input class="form-control" id="password" type="password" placeholder="Digite seu e-mail" name="password">
             </div>
-            <center><button type="submit" class="btn btn-primary btn-lg borda-arred px-5">{{ __('Login') }}</button></center>
+            <button type="submit" class="btn btn-primary btn-lg borda-arred px-5">{{ __('Login') }}</button>
         </form>
     </div>
 @endsection
