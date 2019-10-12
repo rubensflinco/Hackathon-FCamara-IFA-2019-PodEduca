@@ -45,6 +45,7 @@ class LoginController extends Controller
 
     public function index(Request $request)
     {
+        $login = null;
         $message = $request->session()->get('message');
         $request->session()->remove('message');
 

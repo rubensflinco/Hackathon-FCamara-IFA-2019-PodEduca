@@ -42,11 +42,14 @@ h1{
 }
 
 .bg-inicio{
-    background: #eb8deb;
+    background: #c78fc7;
 }
 
 .separacao-ou{
     margin: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
 }
 
 .form.form-login{
@@ -68,4 +71,32 @@ h1{
     font-size: 50px;
     font-weight: bolder;
     text-decoration: none;
+}
+
+.form-control{
+    background-color: transparent!important;
+    border: none!important;
+    border-radius: 0px!important;
+    border-bottom: rgba(255, 255, 255, 0.5) 2px solid!important;
+    color: #fff!important;
+    padding-top: 25px!important;
+    transition: 1s;
+}
+.form-control:active,
+.form-control:focus{
+    border-bottom: rgba(255, 255, 255, 1) 2px solid!important;
+    padding-top: 15px!important;
+    transition: 1s;
+}
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #fff;
+    opacity: 1; /* Firefox */
+}
+  
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: #fff;
 }
