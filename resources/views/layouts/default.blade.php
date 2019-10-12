@@ -26,7 +26,9 @@
 
 
 <body>
+  @if ( $__env->yieldContent('menu') == true )
     @include('layouts.menu.index')
+  @endif
 
     <div class="separacao-transparente">
         <div class="row">

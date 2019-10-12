@@ -1,4 +1,5 @@
 @extends('layouts.default')
+@section('menu', false)
 @section('conteudo')
     <form method="POST" action="{{ route('login') }}">
     @csrf
@@ -9,4 +10,3 @@
                                     </button>
     </form>
 @endsection
-
