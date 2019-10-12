@@ -37,6 +37,10 @@ h1{
     font-size: 45px;
 }
 
+.bloqueado img{
+    filter: grayscale(1);
+}
+
 .text-white,
 .white{
     color: white;
