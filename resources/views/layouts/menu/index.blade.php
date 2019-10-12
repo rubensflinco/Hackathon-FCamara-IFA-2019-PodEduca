@@ -5,7 +5,7 @@
   @switch(Auth::user()->grupo)
       @case("admin")
           <a href="/dashboard">
-            <i class="fa fa-home " aria-hidden="true"></i><span>Usuário</span>
+            <i class="fa fa-home " aria-hidden="true"></i><span>Facilitadores</span>
           </a>
           <a href="/dashboard/turmas">
             <i class="fa fa-home " aria-hidden="true"></i><span>Turmas</span>
