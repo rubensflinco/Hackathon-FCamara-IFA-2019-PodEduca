@@ -41,3 +41,7 @@ Route::get('/dashboard/turmas', function () {
     return view('dashboard.facilitador.turmas');
 });
 
+Route::get('/dashboard/turmasAdmin', function (){
+    return view('dashboard.admin.turmas');
+});
+
