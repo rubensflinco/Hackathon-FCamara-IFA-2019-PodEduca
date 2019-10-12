@@ -55,6 +55,8 @@
 
   <nav class="navbar navbar-gradient navbar-top scrolled navbar-fixed-top">
     <div class="container">
+    <!-- <img src="https://zdnet4.cbsistatic.com/hub/i/r/2017/03/06/a4a5bb7b-7a1d-4f2d-8be2-a78455e8f749/resize/1200x900/9584580a6d94305113961f57d4421745/github-logo-silhouette-in-a-square318-54633.jpg" class="perfil" alt="img_perfil" /> -->
+                        
       @extends('layouts.menu.desktop.cima')
 
       @extends('layouts.menu.mobile.baixo')

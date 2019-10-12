@@ -26,12 +26,13 @@
                     @endswitch
                   </tr>
                 </thead>
+                @foreach ($turmas as $turma)
                 <tbody>
                   @switch(Auth::user()->grupo)
                     @case("facilitador")
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
+                        <th scope="row">{{ $turma->id }}</th>
+                        <td>{{ $turma->nome }}</td>
                         <td>
                           <a class="btn btn-info btn-circle"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                           <a class="btn btn-warning btn-circle"><i class="fa fa-pencil" aria-hidden="true"></i></a>
@@ -42,8 +43,8 @@
 
                     @case("admin")
                       <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
+                        <th scope="row">{{ $turma->id }}</th>
+                        <td>{{ $turma->nome }}</td>
                         <td>
                           <a class="btn btn-info btn-circle"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                           <a class="btn btn-warning btn-circle"><i class="fa fa-pencil" aria-hidden="true"></i></a>
@@ -55,7 +56,8 @@
                     @default
 
                     @endswitch
-                </tbody>
+                    
+                @endforeach
               </table>
 
             </div>

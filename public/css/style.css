@@ -19,6 +19,11 @@
 body{
     font-family: 'Montserrat', sans-serif;
     margin: 0 !important;
+    padding-bottom: 74px;
+}
+
+.card{
+    width: 20%;
 }
 
 .centro{
@@ -35,6 +40,27 @@ h1{
 .white{
     color: white;
 }
+
+.perfil{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.perfil img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.painel{
+    border: 1px solid #6d586d;
+    border-radius: 20px;
+    box-shadow: 0 3px 3px #6d586d;
+    padding: 10px;
+}
+
 
 
 .margin{
@@ -109,4 +135,20 @@ h1{
 .form-black .form-control:active,
 .form-black .form-control:focus{
     border-bottom: rgba(000, 000, 000, 1) 2px solid!important;
+}
+
+.nav-bottom{
+    border-top: 1px solid #eb8deb !important;
+    background-color: rgb(255, 255, 255) !important;
+}
+
+@media (max-width: 768px){
+    .perfil{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card{
+        width: 100%;
+    }
 }

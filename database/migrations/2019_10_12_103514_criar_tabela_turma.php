@@ -19,6 +19,8 @@ class CriarTabelaTurma extends Migration
             $table->string('nome');
             $table->string('codigo');
             $table->unsignedInteger('intituicao_id');
+            $table->unsignedInteger('facilitador_id');
+
         });
     }
 
