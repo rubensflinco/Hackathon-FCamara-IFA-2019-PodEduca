@@ -11,3 +11,11 @@ function closeNavMobile() {
       $('#menu-mySidenav-backdrop').removeClass("menu-backdrop");
     });
   }
+
+function abrirForm(){
+  document.getElementById("teste").style.height = "100%";
+}
+
+function fecharForm(){
+  document.getElementById("teste").style.height = "0";
+}

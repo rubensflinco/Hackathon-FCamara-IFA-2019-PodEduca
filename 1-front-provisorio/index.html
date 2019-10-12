@@ -12,84 +12,40 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="./src/css/tema.css">
   <link rel="stylesheet" href="./src/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <div class="menuLateral">
-    <div id="menu-mySidenav" class="menu-sidenav">
-      <!-- <img class="menu-foto" src="/assets/img/topoMenu.png" alt="Logotipo com o wallpaper do aplicativo." /> -->
-      <a to="/">
-        <i class="fa fa-home " aria-hidden="true"></i><span>Home</span>
-      </a>
-
-      <a to="/cadastrar">
-        <i class="fa fa-user " aria-hidden="true"></i><span>Cadastrar-se</span>
-      </a>
-
-      <a to="/login">
-        <i class="fa fa-user " aria-hidden="true"></i><span>Logar-se</span>
-      </a>
-
-      <button class="closebtn">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-      </button>
+  <div class="inicio">
+    <div class="centro bg-inicio">
+      <div class="container centro center">
+        <h1 class="animated white tada">PodEduca</h1>
+        <p class="white">...</p>
+        <buttton onclick="abrirForm()" class="btn btn-primary btn-lg borda-arred px-5 white">Entrar</buttton>
+        <button class="btn btn-light btn-lg borda-arred px-5 margin">Entrar com um PIN</button>
+      </div>
     </div>
-    <div id="menu-mySidenav-backdrop"></div>
   </div>
 
-  <nav class="navbar navbar-gradient navbar-top scrolled navbar-fixed-top">
-    <div class="container">
-      <div id="navbar" class="navbar-collapse" remove-pc="">
-        <ul class="nav navbar-right center">
-          <li>
-            <a onClick="openNavMobile()">
-              <i class="button fa fa-bars fa-2x fa-mobile-3x" aria-hidden="true"></i>
-              <p>Menu</p>
-            </a>
-          </li>
-
-          <li>
-            <a to="/conta">
-              <i class="button fa fa-user fa-2x fa-mobile-3x" aria-hidden="true"></i>
-              <p>Conta</p>
-            </a>
-          </li>
-
-        </ul>
+  <div id="teste" class="teste">
+    <a href="#" class="sair" onclick="fecharForm()">&times;</a>
+    <form>
+      <div class="form-group">
+        <label>Digite seu E-mail:</label>
+        <input class="form-control" type="email" placeholder="Digite seu e-mail">
       </div>
-
-      <div id="navbar" class="navbar-collapse" remove-mobile="">
-        <ul class="nav navbar-right center">
-
-          <li>
-            <a to="/">
-              <p>Home</p>
-            </a>
-          </li>
-
-          <li class="separar"> | </li>
-          <li>
-            <a to="/cadastrar">
-              <p>Cadastrar-se</p>
-            </a>
-          </li>
-          <li>
-            <a to="/login">
-              <p>Logar-se</p>
-            </a>
-          </li>
-
-        </ul>
+      <div class="form-group">
+          <label>Digite seu E-mail:</label>
+          <input class="form-control" type="email" placeholder="Digite seu e-mail">
       </div>
-
-    </div>
-  </nav>
-
+      <buttton onclick="abrirForm()" class="btn btn-primary btn-lg borda-arred px-5">Entrar</buttton>  
+    </form>
+  </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
