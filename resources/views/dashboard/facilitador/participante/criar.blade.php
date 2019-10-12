@@ -8,10 +8,10 @@
     <select id="genero" name="genero">
         <option value="masculino">Masculino</option>
         <option value="ferminino">Feminino</option>
+    </select>
         <label>Data de nascimento</label>
         <input type="date" name="data_nascimento" id="data_nascimento">
         <label>senha</label>
         <input type="password" name="senha" id="senha">
-    </select>
     <button type="submit">Cadastrar</button>
 </form>
