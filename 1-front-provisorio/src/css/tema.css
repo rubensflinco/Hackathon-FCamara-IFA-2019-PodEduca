@@ -1088,7 +1088,8 @@ input.form-login:nth-child(3n) {
     max-width: 90px;
 }
 .navbar-gradient {
-    background: transparent;
+    background: #69E3FF;
+    background: linear-gradient(90deg, #69E3FF 0%, #E72CE8 100%);
     box-shadow: none;
     transition: 1s;
 }
@@ -1179,8 +1180,7 @@ input.form-login:nth-child(3n) {
     transition: 1s;
 }
 .navbar-gradient.scrolled {
-    background: #e6a365;
-    background: linear-gradient(90deg, #e6a365 0%, #f8c083 100%);
+    background: #69E3FF;
     box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .5);
     transition: 1s;
 }
