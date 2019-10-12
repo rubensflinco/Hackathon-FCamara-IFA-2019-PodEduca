@@ -54,22 +54,19 @@ class LoginController extends Controller
 
     public function login(Request $request) {
         $rules = array(
-            'email' => 'required|email',
+            'nick' => 'required|string',
             'password' => 'required|string|min:8'
         );
 
         $validator = Validator::make(Input::all(), $rules);
-        $email = $request->input('email');
+        $email = $request->input('nick');
         $password = $request->input('password');
 
-        if ($validator->fails()) {
-            $this->makeMessages($request, "O e-mail deve ser válido e a senha ter no mínimo 8 caracteres");
-            return redirect()->route('login');
-        } else {
-            $userData = User::where('email', $email)->first();
+        
+            $userData = User::where('nick', $email)->first();
             if ($userData != null) {
                 if ($userData && Hash::check($password, $userData->password)) {
-                    $credentials = Input::only('email', 'password');
+                    $credentials = Input::only('nick', 'password');
                     if (Auth::attempt($credentials)) {
                         return redirect()->route('dashboard');
                     }
@@ -77,10 +74,9 @@ class LoginController extends Controller
                 $this->makeMessages($request, "Não foi possível realizar o login, verifique os dados");
                 return redirect()->route('login');
             } else {
-                $this->makeMessages($request, "E-mail não cadastrado");
+                $this->makeMessages($request, "Nick não cadastrado");
                 return redirect()->route('login');
             }
-        }
     }
 
     private function makeMessages(Request $request, $message)
