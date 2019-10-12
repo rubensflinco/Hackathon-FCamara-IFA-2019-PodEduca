@@ -10,6 +10,9 @@
                 <a href="{{ route('instituicao.cadastrar') }}" >
     Cad Inst
 </a>
+<a href="{{ route('turma.cadastrar') }}" >
+    Cad Turma
+</a>
             </div>
         </div>
 </div>
