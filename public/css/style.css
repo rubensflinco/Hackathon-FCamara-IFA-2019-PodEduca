@@ -15,6 +15,10 @@
     border-radius: 50px;
     transition: 1s;
 }
+.fundo-transparente{
+    background: transparent;
+    background-color: transparent;
+}
 
 .dashboard{
     font-family: 'Montserrat', sans-serif;
