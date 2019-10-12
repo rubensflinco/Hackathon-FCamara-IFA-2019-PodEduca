@@ -1,13 +1,16 @@
-<h3>Facilitador</h3>
+@extends('layouts.default')
+@section('menu', true)
+@section('conteudo')
 
-<a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-    Sair
-</a>
+<div class="separacao-transparente">
+        <div class="row">
+            <div class="container">
 
-<a href="{{ route('instituicao.cadastrar') }}" >
+                <h3>Facilitador</h3>
+                <a href="{{ route('instituicao.cadastrar') }}" >
     Cad Inst
 </a>
-<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-    @csrf
-</form>
+            </div>
+        </div>
+</div>
+@endsection

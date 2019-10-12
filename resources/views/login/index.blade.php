@@ -20,6 +20,7 @@
                     <input class="form-control" id="password" type="password" placeholder="Digite a sua senha" name="password" required>
                 </div>
 
+
                 <span class="separacao-ou"> OU </span>
 
                 <input type="text" class="form-control" placeholder="Digite o PIN da turma">
