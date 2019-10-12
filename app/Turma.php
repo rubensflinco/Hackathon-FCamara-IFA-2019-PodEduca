@@ -8,6 +8,8 @@ class Turma extends Model
 {
     protected $table = 'turmas';
 
+    public $timestamps = false;
+
     protected $fillable = [
         'id', 'nome', 'codigo', 'intituicao_id'
     ];

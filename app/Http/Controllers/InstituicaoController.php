@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class InstituicaoController extends Controller
 {
     public function index() {
-        return view("instituicao.cadastrar");
+        return view("dashboard.admin.instituicao.cadastrar");
     }
 
     public function cadastrar(Request $request) {
