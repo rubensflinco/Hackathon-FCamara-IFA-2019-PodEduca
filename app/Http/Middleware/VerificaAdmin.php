@@ -17,7 +17,7 @@ class VerificaAdmin
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->grupo = 'admin') {
+        if(Auth::user()->grupo == 'admin') {
             return $next($request);
         } else {
             return redirect()->route('dashboard');

@@ -51,7 +51,8 @@ Route::get('/dashboard/participante/listar', 'ParticipanteController@index');
 
 //Rotas para Admin
 Route::get('/dashboard/instituicao/cadastrar', 'InstituicaoController@index')->name('instituicao.cadastrar');
-Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrar');
+Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrarForm');
+Route::post('/dashboard/instituicao/listar', 'InstituicaoController@index');
 
 
 

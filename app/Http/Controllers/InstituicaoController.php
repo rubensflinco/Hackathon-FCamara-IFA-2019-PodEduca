@@ -13,8 +13,16 @@ class InstituicaoController extends Controller
         $this->middleware('verificar.usuario.admin');
     }
     
-    public function index() {
+    public function index(Request $request) {
         $instituicoes = $this->listar();
+
+        $message = $request->session()->get('message');
+        $request->session()->remove('message');
+            
+        return view("dashboard.admin.instituicao.listar", compact('instituicoes', 'message'));
+    }
+
+    public function cadastrarForm() {
         return view("dashboard.admin.instituicao.cadastrar");
     }
 
@@ -34,6 +42,6 @@ class InstituicaoController extends Controller
     }
 
     private function listar() {
-        
+        return Instituicao::all(); 
     }
 }
