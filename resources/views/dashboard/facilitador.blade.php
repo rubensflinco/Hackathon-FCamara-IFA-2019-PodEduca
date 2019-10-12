@@ -1,9 +1,14 @@
-<h3>Facilitador</h3>
+@extends('layouts.default')
+@section('menu', true)
+@section('conteudo')
 
-<a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                    Sair
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
+<div className="separacao-transparente">
+        <div className="row">
+            <div className="container">
+
+                <h3>Facilitador</h3>
+
+            </div>
+        </div>
+</div>
+@endsection

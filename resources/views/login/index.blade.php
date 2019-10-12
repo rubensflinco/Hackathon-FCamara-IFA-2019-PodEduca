@@ -17,7 +17,7 @@
                         <input class="form-control" id="email" type="email" placeholder="Digite seu e-mail"  name="email" required>
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="password" type="password" placeholder="Digite seu e-mail" name="password" required>
+                        <input class="form-control" id="password" type="password" placeholder="Digite sua senha" name="password" required>
                     </div>
 
                     <span class="separacao-ou"> OU </span>
