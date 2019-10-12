@@ -37,8 +37,53 @@ h1{
     font-size: 45px;
 }
 
+.text-white,
 .white{
     color: white;
+}
+.text-black{
+    color: #000;
+}
+.navbar-center-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+}
+.navbar-gradient{
+    background-color: rgba(238, 238, 238, 0.5);
+    border-bottom: 1px #eeeeee solid;
+}
+body{
+    padding-top: 30px;
+}
+
+/* Tela de PC */
+@media (min-width:768px) {
+
+}
+
+/* Tela de Mobile */
+@media (max-width:767px) {
+.navbar-gradient{
+    background-color: transparent;
+    border-bottom: 1px transparent solid;
+}
+body{
+    padding-top: 0px;
+}
+.navbar-right {
+    border-bottom: 1px #eeeeee solid;
+    box-shadow: none;
+}
+#navbar {
+    background-color: rgba(238, 238, 238, 0.5);
+}
 }
 
 .perfil{

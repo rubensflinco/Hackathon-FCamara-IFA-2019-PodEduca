@@ -15,24 +15,23 @@
           </a>
           <a href="/dashboard">
             <i class="fa fa-home " aria-hidden="true"></i><span>Missão</span>
+          <a href="/dashboard/poderes">
+            <i class="fa fa-fire " aria-hidden="true"></i><span>Poderes</span>
           </a>
-          <a href="/dashboard">
-            <i class="fa fa-home " aria-hidden="true"></i><span>Poderes</span>
+          <a href="/dashboard/missoes">
+            <i class="fa fa-flag-checkered " aria-hidden="true"></i><span>Missões</span>
           </a>
-          <a href="/dashboard">
-            <i class="fa fa-home " aria-hidden="true"></i><span>Instituições</span>
+          <a href="/dashboard/facilitadores">
+            <i class="fa fa-users " aria-hidden="true"></i><span>Facilitadores</span>
           </a>
-          <a href="/dashboard">
-            <i class="fa fa-home " aria-hidden="true"></i><span>Oficinas</span>
+          <a href="/dashboard/instituicoes">
+            <i class="fa fa-building-o " aria-hidden="true"></i><span>Instituições</span>
           </a>
           @break
 
       @case("facilitador")
-          <a href="/dashboard/turmas">
-            <i class="fa fa-users " aria-hidden="true"></i><span>Campanha</span>
-          </a>
-          <a href="/dashboard/turmas">
-            <i class="fa fa-users " aria-hidden="true"></i><span>Encontro</span>
+          <a href="/dashboard/campanha">
+            <i class="fa fa-bullhorn " aria-hidden="true"></i><span>Campanha</span>
           </a>
           <a href="/dashboard/participante/listar">
             <i class="fa fa-users " aria-hidden="true"></i><span>Participantes</span>
@@ -40,17 +39,11 @@
           @break
       
       @case("participante")
-          <a href="/dashboard/turma">
-            <i class="fa fa-users " aria-hidden="true"></i><span>Turma</span>
-          </a>
           <a href="/dashboard/missoes">
             <i class="fa fa-flag-checkered " aria-hidden="true"></i><span>Missões</span>
           </a>
           <a href="/dashboard/poderes">
             <i class="fa fa-fire " aria-hidden="true"></i><span>Poderes</span>
-          </a>
-          <a href="/dashboard/conta">
-            <i class="fa fa-user " aria-hidden="true"></i><span>Conta</span>
           </a>
           @break
           
@@ -61,15 +54,35 @@
 
   <nav class="navbar navbar-gradient navbar-top scrolled navbar-fixed-top">
     <div class="container">
-    <!-- <img src="https://zdnet4.cbsistatic.com/hub/i/r/2017/03/06/a4a5bb7b-7a1d-4f2d-8be2-a78455e8f749/resize/1200x900/9584580a6d94305113961f57d4421745/github-logo-silhouette-in-a-square318-54633.jpg" class="perfil" alt="img_perfil" /> -->
-                        
-      @extends('layouts.menu.desktop.cima')
+
+      @include('layouts.menu.desktop.cima')
 
       @extends('layouts.menu.mobile.baixo')
       @section('conteudo.menu.mobile.baixo')
-        <li><a href="/dashboard/conta">
-            <i class="button fa fa-user fa-2x fa-mobile-3x" aria-hidden="true"></i><p>Conta</p>
-        </a></li>
+
+       @switch(Auth::user()->grupo)
+      @case("admin")
+          <li><a href="/dashboard/instituicoes">
+              <i class="button fa fa-building-o fa-2x fa-mobile-3x" aria-hidden="true"></i><p>Instituições</p>
+          </a></li>
+          @break
+
+      @case("facilitador")
+          <li><a href="/dashboard/campanha">
+              <i class="button fa fa-bullhorn fa-2x fa-mobile-3x" aria-hidden="true"></i><p>Campanha</p>
+          </a></li>
+          @break
+      
+      @case("participante")
+          <li><a href="/dashboard/missoes">
+              <i class="button fa fa-flag-checkered fa-2x fa-mobile-3x" aria-hidden="true"></i><p>Missões</p>
+          </a></li>
+          @break
+          
+      @default
+          
+  @endswitch
+
       @endsection
 
     </div>

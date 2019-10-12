@@ -8,6 +8,10 @@
 
     @yield('conteudo.menu.lateral')
 
+    <a href="/dashboard/conta">
+      <i class="fa fa-user " aria-hidden="true"></i><span>Conta</span>
+    </a>
+
     <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
       <i class="fa fa-sign-out " aria-hidden="true"></i><span>Sair</span>
     </a>
