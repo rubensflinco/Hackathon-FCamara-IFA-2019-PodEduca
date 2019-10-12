@@ -14,8 +14,4 @@ class Instituicao extends Model
     protected $fillable = [
         'id', 'nome', 'cep', 'logradouro','numero', 'complemento', 'bairro', 'localidade', 'uf'
     ];
-    
-    public function instituicao() {
-        return $this->hasMany(Turma::class);
-    }
 }
