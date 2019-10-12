@@ -1,4 +1,4 @@
-<div id="navbar" class="navbar-collapse" remove-pc="">
+<div id="navbar" class="navbar-collapse nav-bottom" remove-pc="">
   <ul class="nav navbar-right center">
 
       <li><a onClick="openNavMobile();">

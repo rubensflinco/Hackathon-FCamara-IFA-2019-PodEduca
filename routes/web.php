@@ -26,8 +26,8 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth.register');
 });
-Auth::routes();
 
+Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
