@@ -1180,7 +1180,7 @@ input.form-login:nth-child(3n) {
     transition: 1s;
 }
 .navbar-gradient.scrolled {
-    background: rgb(183, 242, 255);
+    background: #69E3FF;
     box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .5);
     transition: 1s;
 }
