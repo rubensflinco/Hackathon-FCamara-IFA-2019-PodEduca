@@ -6,9 +6,7 @@
 <div class="separacao-transparente">
     <div class="row">
         <div class="container">
-
             <h3>Cadastrar nova instituição</h3>
-
             <div class="col-md-6 col-md-offset-3">
                 <form method="POST" class="form form-black center-img">
                     @csrf
@@ -23,7 +21,6 @@
                     <button type="submit" class="btn btn-podeduca btn-lg">Cadastrar >> </button>
                 </form>
             </div>
-
         </div>
     </div>
 </div>

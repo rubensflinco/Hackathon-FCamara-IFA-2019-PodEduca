@@ -34,7 +34,9 @@ Route::get('/dashboard/instituicao/cadastrar', 'InstituicaoController@index')->n
 Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrar');
 
 
-Route::get('/dashboard/turma/cadastrar', 'TurmaController@index')->name('turma.cadastrar');
+Route::get('/dashboard/turma/listar', 'TurmaController@index')->name('turma.cadastrar');
+Route::get('/dashboard/turma/cadastrar', 'TurmaController@cadastrarForm');
+
 Route::post('/dashboard/turma/cadastrar', 'TurmaController@cadastrar');
 
 Route::get('/dashboard/turmas', function () {

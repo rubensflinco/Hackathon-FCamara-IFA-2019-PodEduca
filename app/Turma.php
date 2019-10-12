@@ -11,7 +11,7 @@ class Turma extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'id', 'nome', 'codigo', 'intituicao_id'
+        'id', 'nome', 'codigo', 'intituicao_id', 'facilitador_id'
     ];
 
     public function instituicao() {
