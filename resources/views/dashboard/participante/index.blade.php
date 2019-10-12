@@ -7,7 +7,11 @@
             <div class="container">
                   <div class="perfil">
                     <img src="https://zdnet4.cbsistatic.com/hub/i/r/2017/03/06/a4a5bb7b-7a1d-4f2d-8be2-a78455e8f749/resize/1200x900/9584580a6d94305113961f57d4421745/github-logo-silhouette-in-a-square318-54633.jpg" class="perfil" alt="img_perfil">
-                    <h3>Olá {{@Auth::user()->name}}, tudo bem ?</h3>      
+                    <div>
+                      <h3>Olá {{@Auth::user()->name}}, tudo bem ?</h3> 
+                      <p>Veja aqui suas ...</p>
+                           
+                    </div>  
                   </div>
                   
                     <div class="painel">

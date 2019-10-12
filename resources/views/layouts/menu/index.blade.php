@@ -19,7 +19,7 @@
           <a href="/dashboard">
             <i class="fa fa-home " aria-hidden="true"></i><span>Poderes</span>
           </a>
-          <a href="/dashboard">
+          <a href="/dashboard/instituicao">
             <i class="fa fa-home " aria-hidden="true"></i><span>Instituições</span>
           </a>
           <a href="/dashboard">

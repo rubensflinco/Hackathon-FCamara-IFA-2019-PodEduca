@@ -54,6 +54,13 @@ h1{
     width: 200px;
 }
 
+.perfil div{
+    display: flex;
+    padding: 0 20px;
+    flex-direction: column;
+    width: 100%;
+}
+
 .painel{
     border: 1px solid #6d586d;
     border-radius: 20px;
@@ -143,9 +150,17 @@ h1{
 }
 
 @media (max-width: 768px){
+    body{
+        padding-bottom: 74px;
+    }
+
     .perfil{
         flex-direction: column;
         justify-content: center;
+    }
+
+    .perfil div{
+        align-items: center !important;
     }
 
     .card{
