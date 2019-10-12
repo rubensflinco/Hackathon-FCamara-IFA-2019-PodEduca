@@ -31,6 +31,9 @@
           <a href="/dashboard/turmas">
             <i class="fa fa-users " aria-hidden="true"></i><span>Turmas</span>
           </a>
+          <a href="/dashboard/participante/listar">
+            <i class="fa fa-users " aria-hidden="true"></i><span>Participantes</span>
+          </a>
           @break
       
       @case("participante")
