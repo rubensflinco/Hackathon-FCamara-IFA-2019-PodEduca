@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaTurma extends Migration
+class CriarTabelaEncontro extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,16 @@ class CriarTabelaTurma extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('turmas', function (Blueprint $table) {
+        Schema::create('encontro', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nome');
-            $table->string('codigo');
-            $table->unsignedInteger('intituicao_id');
             $table->unsignedInteger('facilitador_id');
-
+            $table->unsignedInteger('participante_id');
+            $table->unsignedInteger('campanha_id');
+            $table->unsignedInteger('poder_id');
+            $table->date('data');
+            $table->string('missao');
+            $table->string('avaliacao');
+            $table->boolean('presente');
         });
     }
 
@@ -31,7 +33,6 @@ class CriarTabelaTurma extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('turmas');
-        
+        Schema::dropIfExists('encontro');
     }
 }

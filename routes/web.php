@@ -37,8 +37,16 @@ Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrar
 Route::get('/dashboard/turma/listar', 'TurmaController@index')->name('turma.cadastrar');
 Route::get('/dashboard/turmas', 'TurmaController@index')->name('turma.cadastrar');
 Route::get('/dashboard/turma/cadastrar', 'TurmaController@cadastrarForm');
-
 Route::get('/dashboard/turma/presenca/lancar', 'TurmaController@presenca');
-
 Route::post('/dashboard/turma/cadastrar', 'TurmaController@cadastrar');
+
+
+Route::get('/dashboard/participante/criar', function () {
+    return view('dashboard.facilitador.participante.criar');
+});
+
+
+//Rotas para participantes
+Route::post('/dashboard/participante/criar', 'ParticipanteController@cadastrar');
+Route::get('/dashboard/participante/listar', 'ParticipanteController@index');
 

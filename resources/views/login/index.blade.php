@@ -14,16 +14,12 @@
                 </div>
                 @endif
                 <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="Digite seu e-mail" name="email" required>
+                    <input class="form-control" id="nick" type="text" placeholder="Digite o seu nick" name="nick" required>
                 </div>
                 <div class="form-group">
                     <input class="form-control" id="password" type="password" placeholder="Digite a sua senha" name="password" required>
                 </div>
 
-
-                <span class="separacao-ou"> OU </span>
-
-                <input type="text" class="form-control" placeholder="Digite o PIN da turma">
                 <button type="submit" class="btn btn-podeeduca btn-lg borda-arred px-5">{{ __('Entrar') }}</button>
             </form>
 
