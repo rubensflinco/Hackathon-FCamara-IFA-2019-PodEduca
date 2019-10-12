@@ -35,11 +35,10 @@ Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrar
 
 
 Route::get('/dashboard/turma/listar', 'TurmaController@index')->name('turma.cadastrar');
+Route::get('/dashboard/turmas', 'TurmaController@index')->name('turma.cadastrar');
 Route::get('/dashboard/turma/cadastrar', 'TurmaController@cadastrarForm');
 
-Route::post('/dashboard/turma/cadastrar', 'TurmaController@cadastrar');
+Route::get('/dashboard/turma/presenca/lancar', 'TurmaController@presenca');
 
-Route::get('/dashboard/turmas', function () {
-    return view('dashboard.facilitador.turmas');
-});
+Route::post('/dashboard/turma/cadastrar', 'TurmaController@cadastrar');
 

@@ -38,4 +38,9 @@ class TurmaController extends Controller
             ->where('facilitador_id', Auth::user()->id)
             ->get();  
     }
+
+    public function presenca() {
+
+        return view('dashboard.facilitador.turmas.presenca');
+    }
 }
