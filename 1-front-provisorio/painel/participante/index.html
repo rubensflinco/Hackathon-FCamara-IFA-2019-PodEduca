@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Participar</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="../../src/css/tema.css">
+  <link rel="stylesheet" href="../../src/css/style.css">
+
+</head>
+
+<body>
+
+  <div class="menuLateral">
+    <div id="menu-mySidenav" class="menu-sidenav">
+      <!-- <img class="menu-foto" src="/assets/img/topoMenu.png" alt="Logotipo com o wallpaper do aplicativo." /> -->
+      <a>
+        <i class="fa fa-home " aria-hidden="true"></i><span>Home</span>
+      </a>
+
+      <a>
+        <i class="fa fa-users " aria-hidden="true"></i><span>Turma</span>
+      </a>
+
+      <a>
+        <i class="fa fa-flag-checkered " aria-hidden="true"></i><span>Missões</span>
+      </a>
+
+      <a>
+        <i class="fa fa-fire " aria-hidden="true"></i><span>Poderes</span>
+      </a>
+
+      <a>
+        <i class="fa fa-user " aria-hidden="true"></i><span>Conta</span>
+      </a>
+
+
+      <button class="closebtn">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div id="menu-mySidenav-backdrop"></div>
+  </div>
+
+  <nav class="navbar navbar-gradient navbar-top scrolled navbar-fixed-top">
+    <div class="container">
+      <div id="navbar" class="navbar-collapse" remove-pc="">
+        <ul class="nav navbar-right center">
+          <li>
+            <a onClick="openNavMobile()">
+              <i class="button fa fa-bars fa-2x fa-mobile-3x" aria-hidden="true"></i>
+              <p>Menu</p>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <i class="button fa fa-flag-checkered fa-2x fa-mobile-3x" aria-hidden="true"></i>
+              <p>Missões</p>
+            </a>
+          </li>
+
+          <li>
+            <a>
+              <i class="button fa fa-user fa-2x fa-mobile-3x" aria-hidden="true"></i>
+              <p>Conta</p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div id="navbar" class="navbar-collapse" remove-mobile="">
+        <ul class="nav navbar-left center">
+
+          <li>
+            <a onClick="openNavMobile()">
+              <i class="button fa fa-bars fa-2x fa-mobile-3x" aria-hidden="true"></i>
+              <p>Menu</p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="separacao-transparente">
+    <div class="row">
+      <div class="container">
+        <center>
+          <br />
+          <h1>Olá {NOME}, tudo bem ?</h1>
+          <br />
+        </center>
+
+        <div class="panel">
+          <div class="panel-heading">
+            <div class="container">
+              <h4><b>
+                  <i class="fa fa-level-up" aria-hidden="true"></i>
+                  Rank
+                </b></h4>
+              <center>
+                <hr>
+                <p>Seu rank atual na sua turma é: 0</p>
+              </center>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="../../src/js/fun.js"></script>
+  <script>
+    closeNavMobile();
+  </script>
+</body>
+
+</html>
