@@ -10,10 +10,10 @@
           <a href="/dashboard/missoes">
             <i class="fa fa-flag-checkered " aria-hidden="true"></i><span>Missões</span>
           </a>
-          <a href="/dashboard/facilitadores">
+          <a href="/dashboard/facilitadores/listar">
             <i class="fa fa-users " aria-hidden="true"></i><span>Facilitadores</span>
           </a>
-          <a href="/dashboard/instituicoes">
+          <a href="/dashboard/instituicao/listar">
             <i class="fa fa-building-o " aria-hidden="true"></i><span>Instituições</span>
           </a>
           @break

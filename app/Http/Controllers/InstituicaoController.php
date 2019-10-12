@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Instituicao;
 use Illuminate\Http\Request;
+use View;
 
 class InstituicaoController extends Controller
 {
@@ -18,12 +19,13 @@ class InstituicaoController extends Controller
 
         $message = $request->session()->get('message');
         $request->session()->remove('message');
-            
+
         return view("dashboard.admin.instituicao.listar", compact('instituicoes', 'message'));
     }
 
     public function cadastrarForm() {
-        return view("dashboard.admin.instituicao.cadastrar");
+        $instituicao = new Instituicao();
+        return view("dashboard.admin.instituicao.cadastrar", compact('instituicao', $instituicao));
     }
 
     public function cadastrar(Request $request) {
@@ -38,7 +40,32 @@ class InstituicaoController extends Controller
             'uf' => $request->uf,
         ]);
 
-        return redirect()->route('dashboard');
+        return redirect()->route('instituicao.listar');
+    }
+
+    public function remover($id) {
+        $instituicao = Instituicao::find($id);
+        $instituicao->delete();
+        return redirect()->route('instituicao.listar');
+    }
+
+    public function editarForm($id) {
+        $instituicao = Instituicao::find($id);
+        return view('dashboard.admin.instituicao.cadastrar', compact('instituicao', $instituicao));
+    }
+
+    public function editar(Request $request, $id) {
+        $instituicao = Instituicao::find($id);
+        $instituicao->nome        = $request->nome;
+        $instituicao->cep = $request->cep;
+        $instituicao->logradouro    = $request->logradouro;
+        $instituicao->numero       = $request->numero;
+        $instituicao->complemento       = $request->complemento;
+        $instituicao->bairro       = $request->bairro;
+        $instituicao->localidade       = $request->localidade;
+        $instituicao->uf       = $request->uf;
+        $instituicao->save();
+        return redirect()->route('instituicao.listar');
     }
 
     private function listar() {

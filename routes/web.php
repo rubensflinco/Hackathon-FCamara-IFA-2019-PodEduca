@@ -50,9 +50,13 @@ Route::post('/dashboard/participante/criar', 'ParticipanteController@cadastrar')
 Route::get('/dashboard/participante/listar', 'ParticipanteController@index');
 
 //Rotas para Admin
-Route::get('/dashboard/instituicao/cadastrar', 'InstituicaoController@index')->name('instituicao.cadastrar');
-Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrarForm');
-Route::post('/dashboard/instituicao/listar', 'InstituicaoController@index');
+Route::get('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrarForm')->name('instituicao.cadastrar');
+Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrar');
+Route::get('/dashboard/instituicao/listar', 'InstituicaoController@index')->name('instituicao.listar');
+Route::delete('/dashboard/instituicao/remover/{id}', 'InstituicaoController@remover');
+Route::get('/dashboard/instituicao/editar/{id}', 'InstituicaoController@editarForm');
+Route::post('/dashboard/instituicao/editar/{id}', 'InstituicaoController@editar');
+
 
 
 
