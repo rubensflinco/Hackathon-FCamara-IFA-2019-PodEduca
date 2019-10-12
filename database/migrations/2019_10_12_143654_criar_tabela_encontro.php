@@ -18,7 +18,9 @@ class CriarTabelaEncontro extends Migration
             $table->unsignedInteger('facilitador_id');
             $table->unsignedInteger('participante_id');
             $table->unsignedInteger('poder_id');
-            $table->string('data');
+            $table->date('data');
+            $table->string('missao');
+            $table->string('avaliacao');
         });
     }
 
