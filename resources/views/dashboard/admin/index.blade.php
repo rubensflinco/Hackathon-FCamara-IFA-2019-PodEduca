@@ -8,7 +8,7 @@
 
                 <h3>Admin</h3>
 
-                <p>Olá {Nome}, seja bem vindo!!!</p>
+                <p>Olá {{@Auth::user()->name}}, seja bem vindo!!!</p>
 
             </div>
         </div>

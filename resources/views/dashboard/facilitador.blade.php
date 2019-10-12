@@ -7,7 +7,9 @@
             <div class="container">
 
                 <h3>Facilitador</h3>
-
+                <a href="{{ route('instituicao.cadastrar') }}" >
+    Cad Inst
+</a>
             </div>
         </div>
 </div>
