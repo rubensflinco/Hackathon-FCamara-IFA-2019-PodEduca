@@ -11,7 +11,10 @@
 
       @case("facilitador")
           <a href="/dashboard/turmas">
-            <i class="fa fa-users " aria-hidden="true"></i><span>Turmas</span>
+            <i class="fa fa-users " aria-hidden="true"></i><span>Campanha</span>
+          </a>
+          <a href="/dashboard/turmas">
+            <i class="fa fa-users " aria-hidden="true"></i><span>Encontro</span>
           </a>
           <a href="/dashboard/participante/listar">
             <i class="fa fa-users " aria-hidden="true"></i><span>Participantes</span>
