@@ -32,8 +32,6 @@
                                 <i class="fa fa-pencil" aria-hidden="true"></i>
                             </button>
                     </form>
-                      
-                      
                       <form style="display: inline" method="post" action="/dashboard/instituicao/remover/{{ $instituicao->id }}"
                       onsubmit="return confirm('Tem certeza que deseja remover {{addslashes($instituicao->nome)}}')">
                       @csrf
