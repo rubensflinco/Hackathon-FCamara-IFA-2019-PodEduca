@@ -8,6 +8,8 @@
 
                 <h3>Admin</h3>
 
+                <p>Olá {Nome}, seja bem vindo!!!</p>
+
             </div>
         </div>
 </div>

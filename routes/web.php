@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
 
 Route::get('/', function () {
     return view('login.index');
@@ -27,6 +26,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('auth.register');
 });
+Auth::routes();
 
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
