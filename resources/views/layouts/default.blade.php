@@ -41,11 +41,15 @@
 
 </head>
 
+@if ( $__env->yieldContent('dashboard') == true )
+  <body class="dashboard">
+@else
+  <body>
+@endif
 
-<body>
-  @if ( $__env->yieldContent('menu') == true )
-    @include('layouts.menu.index')
-  @endif
+@if ( $__env->yieldContent('dashboard') == true )
+  @include('layouts.menu.index')
+@endif
 
   @yield('conteudo')
 
