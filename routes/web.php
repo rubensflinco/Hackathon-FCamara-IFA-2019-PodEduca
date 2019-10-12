@@ -30,11 +30,14 @@ Auth::routes();
 
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-
 Route::get('/dashboard/instituicao/cadastrar', 'InstituicaoController@index')->name('instituicao.cadastrar');
 Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrar');
+
 
 Route::get('/dashboard/turma/cadastrar', 'TurmaController@index')->name('turma.cadastrar');
 Route::post('/dashboard/turma/cadastrar', 'TurmaController@cadastrar');
 
+Route::get('/dashboard/turmas', function () {
+    return view('dashboard.facilitador.turmas');
+});
 

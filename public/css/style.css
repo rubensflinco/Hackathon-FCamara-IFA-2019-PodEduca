@@ -88,15 +88,25 @@ h1{
     padding-top: 15px!important;
     transition: 1s;
 }
-.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #fff;
-    opacity: 1; /* Firefox */
-}
   
-.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.form-control:-ms-input-placeholder,
+.form-control::-ms-input-placeholder,
+.form-control::placeholder { 
     color: #fff;
+    opacity: 1;
 }
 
-.form-control::-ms-input-placeholder { /* Microsoft Edge */
-    color: #fff;
+.form-black .form-control:-ms-input-placeholder,
+.form-black .form-control::-ms-input-placeholder,
+.form-black .form-control::placeholder { 
+    color: #000;
+    opacity: 1;
+}
+.form-black .form-control{
+    border-bottom: rgba(000, 000, 000, 0.5) 2px solid!important;
+    color: #000!important;
+}
+.form-black .form-control:active,
+.form-black .form-control:focus{
+    border-bottom: rgba(000, 000, 000, 1) 2px solid!important;
 }

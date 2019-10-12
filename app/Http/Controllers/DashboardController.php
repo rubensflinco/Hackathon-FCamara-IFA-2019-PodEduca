@@ -8,14 +8,22 @@ use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
     public function index() {
-        if(Auth::user()->grupo == 'participante') {
-            return view('dashboard.participante');
-        }
-        if(Auth::user()->grupo == 'facilitador') {
-            return view('dashboard.facilitador');
-        }
-        if(Auth::user()->grupo == 'admin') {
-            return view('dashboard.admin');
+        switch (Auth::user()->grupo) {
+            case 'participante':
+                return view('dashboard.participante.index');
+                break;
+            
+            case 'facilitador':
+                return view('dashboard.facilitador.index');
+                break;
+            
+            case 'admin':
+                return view('dashboard.admin.index');
+                break;
+            
+            default:
+                return view('home');
+                break;
         }
     }
 }

@@ -10,8 +10,8 @@
           @break
 
       @case("facilitador")
-          <a href="/dashboard">
-            <i class="fa fa-home " aria-hidden="true"></i><span>test</span>
+          <a href="/dashboard/turmas">
+            <i class="fa fa-users " aria-hidden="true"></i><span>Turmas</span>
           </a>
           @break
       
