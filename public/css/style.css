@@ -1,3 +1,21 @@
+.btn-podeeduca{
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333!important;
+    border-radius: 10px;
+    transition: 1s;
+}
+.btn-podeeduca:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333!important;
+    transition: 1s;
+}
+.btn-podeeduca:active{
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333!important;
+    border-radius: 50px;
+    transition: 1s;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
     margin: 0 !important;
@@ -24,18 +42,17 @@ h1{
 }
 
 .bg-inicio{
-    background: rgb(255, 0, 55);
+    background: #eb8deb;
 }
 
-.borda-arred{
-    width: 190px;
-    border-radius: 25px;
+.separacao-ou{
+    margin: 15px;
 }
 
-.form{
+.form.form-login{
     align-items: center;
-    background-color: rgb(255, 0, 55);
-    bottom: 0;
+    background-color: #eb8deb!important;
+    bottom: "-1000px";
     display: flex;
     flex-direction: column;
     height: 0;
@@ -46,7 +63,7 @@ h1{
     width: 100%;
 }
 
-.sair{
+.form-login .sair{
     color: black;
     font-size: 50px;
     font-weight: bolder;

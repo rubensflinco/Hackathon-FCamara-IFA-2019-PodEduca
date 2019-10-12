@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('login.index');
 });
 
+Route::get('/register', function () {
+    return view('auth.register');
+});
+
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');

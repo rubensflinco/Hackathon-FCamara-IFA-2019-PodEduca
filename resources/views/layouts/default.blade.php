@@ -32,13 +32,7 @@
     @include('layouts.menu.index')
   @endif
 
-    <div class="separacao-transparente">
-        <div class="row">
-          <div class="container">
-           @yield('conteudo')
-          </div>
-        </div>
-    </div>
+  @yield('conteudo')
 
 </body>
 

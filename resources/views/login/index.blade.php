@@ -4,15 +4,20 @@
     <div class="inicio">
         <div class="centro bg-inicio">
             <div class="container centro center">
-                <h1 class="animated white tada">PodEduca</h1>
-                <p class="white">...</p>
-                <button onclick="abrirForm()" class="btn btn-primary btn-lg borda-arred px-5 white">Entrar</button>
-                <button class="btn btn-light btn-lg borda-arred px-5 margin">Entrar com um PIN</button>
+                <img class="animated white tada" src="{{ asset('img/logotipo-podeduca.png') }}" width="300px">
+                <p class="animated white tada white">Falaa devv</p>
+                <button onclick="abrirForm()" class="btn btn-podeeduca btn-lg borda-arred px-5 white">Entrar</button>
+                <span class="separacao-ou"> OU </span>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <input type="text" class="form-control" placeholder="Digite o PIN da turma">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="form" class="form">
+    <div id="form" class="form form-login">
         <a href="#" class="sair" onclick="fecharForm()">&times;</a>
         <form method="POST" action="{{ route('login') }}">
         @csrf
@@ -24,18 +29,7 @@
                 <label>Digite seu E-mail:</label>
                 <input class="form-control" id="password" type="password" placeholder="Digite seu e-mail" name="password">
             </div>
-            <button type="submit" class="btn btn-primary btn-lg borda-arred px-5">
-                                        {{ __('Login') }}
-                                    </button>  
+            <center><button type="submit" class="btn btn-primary btn-lg borda-arred px-5">{{ __('Login') }}</button></center>
         </form>
     </div>
-
-    <!-- <form method="POST" action="{{ route('login') }}">
-    
-    <input id="email" type="email" name="email">
-    <input id="password" type="password" name="password">
-    <button type="submit" class="btn btn-primary">
-                                        {{ __('Login') }}
-                                    </button>
-    </form> -->
 @endsection

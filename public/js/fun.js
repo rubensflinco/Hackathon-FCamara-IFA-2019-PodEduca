@@ -14,8 +14,10 @@ function closeNavMobile() {
 
 function abrirForm(){
   document.getElementById("form").style.height = "100%";
+  document.getElementById("form").style.bottom = "0";
 }
 
 function fecharForm(){
   document.getElementById("form").style.height = "0";
+  document.getElementById("form").style.bottom = "-1000px";
 }
