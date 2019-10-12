@@ -30,10 +30,8 @@ Auth::routes();
 
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::get('/dashboard/instituicao/cadastrar', 'InstituicaoController@index')->name('instituicao.cadastrar');
-Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrar');
 
-
+//Rotas para turma
 Route::get('/dashboard/turma/listar', 'TurmaController@index')->name('turma.cadastrar');
 Route::get('/dashboard/turmas', 'TurmaController@index')->name('turma.cadastrar');
 Route::get('/dashboard/turma/cadastrar', 'TurmaController@cadastrarForm');
@@ -46,7 +44,14 @@ Route::get('/dashboard/participante/criar', function () {
 });
 
 
-//Rotas para participantes
+//Rotas para Facilitadores
+//Participantes
 Route::post('/dashboard/participante/criar', 'ParticipanteController@cadastrar');
 Route::get('/dashboard/participante/listar', 'ParticipanteController@index');
+
+//Rotas para Admin
+Route::get('/dashboard/instituicao/cadastrar', 'InstituicaoController@index')->name('instituicao.cadastrar');
+Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrar');
+
+
 
