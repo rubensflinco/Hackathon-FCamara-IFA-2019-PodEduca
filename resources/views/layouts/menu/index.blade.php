@@ -4,15 +4,6 @@
   @section('conteudo.menu.lateral')
   @switch(Auth::user()->grupo)
       @case("admin")
-          <a href="/dashboard">
-            <i class="fa fa-home " aria-hidden="true"></i><span>Facilitadores</span>
-          </a>
-          <a href="/dashboard/turmas">
-            <i class="fa fa-home " aria-hidden="true"></i><span>Turmas</span>
-          </a>
-          <a href="/dashboard">
-            <i class="fa fa-home " aria-hidden="true"></i><span>Conta</span>
-          </a>
           <a href="/dashboard/poderes">
             <i class="fa fa-fire " aria-hidden="true"></i><span>Poderes</span>
           </a>
