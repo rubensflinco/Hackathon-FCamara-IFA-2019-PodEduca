@@ -1,11 +1,12 @@
 <div>
   <div id="menu-mySidenav" class="menu-sidenav">
-  <div class="center-img" onclick="window.location.href = '/dashboard/perfil/{{ @Auth::user()->id }}';" style="cursor: pointer;">
+  <div class="center-img text-center" onclick="window.location.href = '/dashboard/perfil/{{ @Auth::user()->id }}';" style="cursor: pointer;">
     <br/>
     <img class="menu-foto img-circle text-center" src="{{ asset('img/perfil.png') }}" alt="Avatar." width="50%" />
     <br/>
     <h4>{{@Auth::user()->name}}</h4>
-    <br/>
+    <h6>{{ucfirst(@Auth::user()->grupo)}}</h6>
+    <hr style="border-top: 1px solid #ccc;"/>
   </div>
     <a href="/dashboard">
       <i class="fa fa-home " aria-hidden="true"></i><span>Home</span>
