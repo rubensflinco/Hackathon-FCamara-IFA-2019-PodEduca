@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriarTabelaPoderes extends Migration
+class Missoes extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CriarTabelaPoderes extends Migration
      */
     public function up()
     {
-        Schema::create('poderes', function (Blueprint $table) {
+        Schema::create('missoes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome');
             $table->string('descricao');
-            $table->string('icone_url');
+            $table->string('poder_id');
         });
     }
 
@@ -28,6 +28,6 @@ class CriarTabelaPoderes extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('poderes');        
+        Schema::dropIfExists('missoes');    
     }
 }

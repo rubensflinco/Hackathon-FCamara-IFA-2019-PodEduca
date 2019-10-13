@@ -20,8 +20,8 @@ class CriarTabelaEncontro extends Migration
             $table->unsignedInteger('campanha_id');
             $table->unsignedInteger('poder_id');
             $table->date('data');
-            $table->string('missao');
-            $table->string('avaliacao');
+            $table->unsignedInteger('missao_id');
+            $table->boolean('atingiuMissao');
             $table->boolean('presente');
         });
     }

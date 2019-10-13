@@ -16,7 +16,7 @@ class CriarTabelaCampanha extends Migration
         Schema::create('campanha', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nome');
-            $table->unsignedInteger('participante_id');
+            $table->string('participante_id');
         });
     }
 

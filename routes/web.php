@@ -11,23 +11,20 @@
 |
 */
 
+Auth::routes();
 Route::get('/', function () {
     return view('login.index');
 });
 
 Route::get('/', 'Auth\LoginController@index')->name('login');
-
+Route::get('/login', 'Auth\LoginController@index');
 Route::post('/', 'Auth\LoginController@login')->name('login');
 
-Route::get('/login', function () {
-    return view('login.index');
-});
-
 Route::get('/register', function () {
+    // return view('login.index');
     return view('auth.register');
 });
 
-Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
