@@ -55,6 +55,7 @@ Route::post('/dashboard/participante/editar/{id}', 'ParticipanteController@edita
 //Rotas para instituição
 Route::get('/dashboard/poder/cadastrar', 'PoderController@cadastrarForm')->name('poder.cadastrar');
 Route::post('/dashboard/poder/cadastrar', 'PoderController@cadastrar');
+Route::get('/dashboard/poderes', 'PoderController@index')->name('poder.listar');
 Route::get('/dashboard/poder/listar', 'PoderController@index')->name('poder.listar');
 Route::delete('/dashboard/poder/remover/{id}', 'PoderController@remover');
 Route::get('/dashboard/poder/editar/{id}', 'PoderController@editarForm');
