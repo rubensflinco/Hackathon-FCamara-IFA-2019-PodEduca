@@ -21,6 +21,6 @@ class EncontroController extends Controller
     }
 
     public function index() {
-        
+        return view('dashboard.facilitador.encontro.listar');
     }
 }
