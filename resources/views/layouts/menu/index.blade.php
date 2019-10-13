@@ -31,7 +31,7 @@
           @break
       
       @case("participante")
-          <a href="/dashboard/participante/ranking">
+          <a href="/dashboard/ranking">
             <i class="fa fa-trophy" aria-hidden="true"></i><span>Ranking</span>
           </a>
           <a href="/dashboard/missoes">
