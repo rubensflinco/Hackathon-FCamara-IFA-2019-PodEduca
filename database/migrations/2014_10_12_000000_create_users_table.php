@@ -21,8 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('grupo');
             $table->date('data_nascimento');
             $table->string('genero');
+            $table->unsignedInteger('criador_id');
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 

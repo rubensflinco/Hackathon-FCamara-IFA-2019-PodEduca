@@ -53,6 +53,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'nick' => $data['nick'],
             'grupo' => 'participante',
+            'criador_id' => '0',
             'data_nascimento' => '2019-08-10',
             'genero' => 'masculino',
             'password' => Hash::make($data['password']),

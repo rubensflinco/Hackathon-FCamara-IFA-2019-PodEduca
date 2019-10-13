@@ -19,7 +19,7 @@
           @break
 
       @case("facilitador")
-          <a href="/dashboard/campanha">
+          <a href="/dashboard/campanha/listar">
             <i class="fa fa-bullhorn " aria-hidden="true"></i><span>Campanha</span>
           </a>
           <a href="/dashboard/participante/listar">
