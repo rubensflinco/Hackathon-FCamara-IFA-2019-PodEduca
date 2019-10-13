@@ -8,7 +8,7 @@
     <div class="container">
       <ol class="breadcrumb fundo-transparente">
           <li><a href="/">Home</a></li>
-          <li><a href="/dashboard/campanha/listar">Campanha</a></li>
+          <li><a href="/dashboard/participante/listar">Listar</a></li>
           @if ($participante->nome)
             <li class="active">Editar</li>
           @else

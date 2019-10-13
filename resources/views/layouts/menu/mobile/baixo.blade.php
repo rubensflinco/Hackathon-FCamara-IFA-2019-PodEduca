@@ -7,7 +7,7 @@
 
       @yield('conteudo.menu.mobile.baixo')
 
-      <li><a href="/dashboard/perfil">
+      <li><a href="/dashboard/perfil/{{ @Auth::user()->id }}">
         <i class="button fa fa-user fa-2x fa-mobile-3x" aria-hidden="true"></i><p>Perfil</p>
     </a></li>
 
