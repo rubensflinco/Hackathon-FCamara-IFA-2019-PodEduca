@@ -25,9 +25,7 @@ Route::get('/login', function () { return view('login.index'); });
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
-Route::get('/dashboard/perfil', function () {
-    return view('dashboard.perfil');
-});
+Route::get('/dashboard/perfil/{id}', 'PerfilController@index');
 
 //Rotas para turma
 Route::get('/dashboard/turma/listar', 'TurmaController@index')->name('turma.cadastrar');
@@ -52,7 +50,7 @@ Route::post('/dashboard/participante/editar/{id}', 'ParticipanteController@edita
 
 //Rotas para Admin
 
-//Rotas para instituição
+//Rotas para poder
 Route::get('/dashboard/poder/cadastrar', 'PoderController@cadastrarForm')->name('poder.cadastrar');
 Route::post('/dashboard/poder/cadastrar', 'PoderController@cadastrar');
 Route::get('/dashboard/poderes', 'PoderController@index')->name('poder.listar');
@@ -69,7 +67,3 @@ Route::delete('/dashboard/instituicao/remover/{id}', 'InstituicaoController@remo
 Route::get('/dashboard/instituicao/editar/{id}', 'InstituicaoController@editarForm');
 Route::post('/dashboard/instituicao/editar/{id}', 'InstituicaoController@editar');
 //Rotas para facilitadores
-
-
-
-
