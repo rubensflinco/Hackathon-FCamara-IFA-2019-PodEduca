@@ -378,18 +378,18 @@ p{
 .texto-grafico {
     color: #565454;
 }
-.form-control, .select2-container--default .select2-selection--single {
-    background-color: #fff!important;
-    border: 0.5px solid #3855ac!important;
-    box-shadow: inset 0 0px 0px rgba(0,0,0,0), 0 0 8px rgba(0,0,0,0)!important;
-    text-align: left!important;
-}
 .magin-left-5 {
     margin-left: 5px;
 }
 .form-initial {
     display: initial!important;
     width: auto!important;
+}
+.form-control, .select2-container--default .select2-selection--single {
+    background-color: #fff!important;
+    border: 0.5px solid #3855ac!important;
+    box-shadow: inset 0 0px 0px rgba(0,0,0,0), 0 0 8px rgba(0,0,0,0)!important;
+    text-align: left!important;
 }
 .select2-container--default .select2-selection--single {
     z-index: 0!important;

@@ -23,12 +23,10 @@
                 <form method="POST" class="form form-black center-img">
                     @csrf
                     <input value="{{ $campanha->nome }}" type="text" name="nome" id="nome" class="form-control" placeholder="Digite o nome da campanha">
-                    <div id="checkbox">
-                    </div>
-                    <select id="userSelect" class="ativeState2 form-control" name="states[]" multiple="multiple">
+                    <select id="userSelect" class="form-control" name="states[]" multiple="multiple">
                     </select>
-                    <button id="name">chamar</button>
-                    <button type="submit" class="btn btn-warning btn-lg">Cadastrar</button>
+                    <br/><br/>
+                    <button type="submit" class="btn btn-warning btn-lg">Confirmar</button>
                 </form>
             </div>
 
@@ -52,7 +50,7 @@
                     arrayParticipantes.push(item['id']);
                 });
                 $('#userSelect').html(html);
-                $('.ativeState2').select2();
+                $('#userSelect').select2({ placeholder: "Selecione os participantes da campanha" });
             }
         });
 </script>
