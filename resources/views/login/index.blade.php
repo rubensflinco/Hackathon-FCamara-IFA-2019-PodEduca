@@ -1,3 +1,8 @@
+<div class="splash">
+    <img src="{{ asset('img/logotipo-ifa.png') }}" width="120px">
+    <img src="{{ asset('img/logotipo-podeduca-branco.png') }}" width="220px">
+</div>
+
 @extends('layouts.default')
 @section('menu', false)
 @section('conteudo')
@@ -26,4 +31,13 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        setTimeout(() => {
+            $(".splash").css({"opacity":"0", "transition":"1s"});
+            setTimeout(() => {$(".splash").css({"display": "none"});}, 1000);
+        }, 1500);
+    });
+</script>
 @endsection
