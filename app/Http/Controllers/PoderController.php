@@ -73,4 +73,9 @@ class PoderController extends Controller
     private function listar() {
         return Poder::all(); 
     }
+
+    public function listarJSON() {
+        $teste = Poder::all();
+        return $teste; 
+    }
 }

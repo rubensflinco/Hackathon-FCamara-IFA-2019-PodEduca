@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Missoes;
 use Illuminate\Http\Request;
-use View;
 
 class MissoesController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('verificar.usuario.admin');
+        // $this->middleware('verificar.usuario.admin');
     }
     
     public function index(Request $request) {
@@ -58,7 +57,12 @@ class MissoesController extends Controller
         return redirect()->route('missoes.listar');
     }
 
-    private function listar() {
-        return Missoes::all(); 
+    public function listar() {
+        return Missoes::get(); 
+    }
+
+    public function listarJSON($id) {
+        $teste = Missoes::where('poder_id', $id)->get();
+        return $teste; 
     }
 }
