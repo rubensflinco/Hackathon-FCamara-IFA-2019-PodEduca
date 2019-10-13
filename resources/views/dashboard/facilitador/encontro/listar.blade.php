@@ -10,7 +10,7 @@
           <li><a href="/">Home</a></li>
           <li class="active">Encontros</li>
           
-          <a class="btn btn-warning btn-md pull-right" href="/dashboard/encontro/criar">Cadastrar encontro</a>
+          <a class="btn btn-warning btn-md pull-right" href="/dashboard/encontro/cadastrar">Cadastrar encontro</a>
           <br/><br/>
       </ol>
 

@@ -12,6 +12,6 @@ class Encontro extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'id', 'facilitador_id', 'participante_id', 'campanha_id', 'poder_id', 'data', 'missao_id', 'atingiuMissao', 'atingiuMissao', 'presente'
+        'id', 'facilitador_id', 'participante_id', 'campanha_id', 'poder_id', 'data', 'missao_id', 'atingiuMissao', 'presente'
     ];
 }

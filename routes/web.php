@@ -106,6 +106,8 @@ Route::get('/dashboard/encontro/listarUserJSON', 'EncontroController@listarUserJ
 
 //Rotas para encontro
 Route::get('/dashboard/encontro/listar', 'EncontroController@index');
+Route::get('/dashboard/encontro/cadastrar', 'EncontroController@cadastrarForm')->name('encontro.cadastrar');
+Route::post('/dashboard/encontro/cadastrar', 'EncontroController@cadastrar');
 
 
 Route::get('/dashboard/poder/{id}', 'PoderController@perfil');
