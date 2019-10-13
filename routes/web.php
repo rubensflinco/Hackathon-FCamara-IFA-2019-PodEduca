@@ -58,7 +58,7 @@ Route::post('/dashboard/participante/editar/{id}', 'ParticipanteController@edita
 Route::delete('/dashboard/participante/remover/{id}', 'ParticipanteController@remover');
 //Rotas para Admin
 
-//Rotas para instituição
+//Rotas para poder
 Route::get('/dashboard/poder/cadastrar', 'PoderController@cadastrarForm')->name('poder.cadastrar');
 Route::post('/dashboard/poder/cadastrar', 'PoderController@cadastrar');
 Route::get('/dashboard/poderes', 'PoderController@index')->name('poder.listar');
@@ -66,6 +66,14 @@ Route::get('/dashboard/poder/listar', 'PoderController@index')->name('poder.list
 Route::delete('/dashboard/poder/remover/{id}', 'PoderController@remover');
 Route::get('/dashboard/poder/editar/{id}', 'PoderController@editarForm');
 Route::post('/dashboard/poder/editar/{id}', 'PoderController@editar');
+
+//Rotas para facilitadores
+Route::get('/dashboard/facilitadores/criar', 'FacilitadoresController@cadastrarForm')->name('facilitadores.cadastrar');
+Route::post('/dashboard/facilitadores/criar', 'FacilitadoresController@cadastrar');
+Route::get('/dashboard/facilitadores/listar', 'FacilitadoresController@index')->name('facilitadores.listar');
+Route::get('/dashboard/facilitadores/editar/{id}', 'FacilitadoresController@editarForm');
+Route::post('/dashboard/facilitadores/editar/{id}', 'FacilitadoresController@editar');
+Route::delete('/dashboard/facilitadores/remover/{id}', 'FacilitadoresController@remover');
 
 //Rotas para instituição
 Route::get('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrarForm')->name('instituicao.cadastrar');
@@ -77,15 +85,13 @@ Route::post('/dashboard/instituicao/editar/{id}', 'InstituicaoController@editar'
 //Rotas para facilitadores
 
 //Rotas para campanha
-Route::get('/dashboard/campanha/cadastrar', 'CampanhaController@cadastrarForm')->name('campanha.cadastrar');
-Route::post('/dashboard/campanha/cadastrar', 'CampanhaController@cadastrar');
+Route::get('/dashboard/campanha/criar', 'CampanhaController@cadastrarForm')->name('campanha.cadastrar');
+Route::post('/dashboard/campanha/criar', 'CampanhaController@cadastrar');
 Route::get('/dashboard/campanha/listar', 'CampanhaController@index')->name('campanha.listar');
 Route::delete('/dashboard/campanha/remover/{id}', 'CampanhaController@remover');
 Route::get('/dashboard/campanha/editar/{id}', 'CampanhaController@editarForm');
 Route::post('/dashboard/campanha/editar/{id}', 'CampanhaController@editar');
-
-
-
+Route::get('/dashboard/campanha/listarUsuarios', 'CampanhaController@listarParticipantes');
 
 //Rotas para missão
 Route::get('/dashboard/missoes/cadastrar', 'MissoesController@cadastrarForm')->name('missoes.cadastrar');

@@ -13,4 +13,5 @@ class Campanha extends Model
     protected $fillable = [
         'id', 'nome', 'participante_id', 'facilitador_id'
     ];
+
 }

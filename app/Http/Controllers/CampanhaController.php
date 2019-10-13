@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Campanha;
+use App\User;
 use App\Participante;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CampanhaController extends Controller
 {
@@ -25,16 +27,16 @@ class CampanhaController extends Controller
 
     public function cadastrarForm() {
         $campanha = new Campanha();
-        return view("dashboard.facilitador.campanha.cadastrar", compact('campanha', $campanha));
+        return view("dashboard.facilitador.campanha.criar", compact('campanha', $campanha));
     }
 
     public function cadastrar(Request $request) {
-        Campanha::create([
-            'nome' => $request->nome,
-            'participante_id' => $request->participante_id,
-        ]);
-
-        return redirect()->route('instituicao.listar');
+        // Campanha::create([
+        //     'nome' => $request->nome,
+        //     'participante_id' => $request->participante_id,
+        // ]);
+            echo $request->participantes;
+        // return redirect()->route('instituicao.listar');
     }
 
     public function remover($id) {
@@ -45,7 +47,7 @@ class CampanhaController extends Controller
 
     public function editarForm($id) {
         $instituicao = Campanha::find($id);
-        return view('dashboard.facilitador.campanha.cadastrar', compact('instituicao', $instituicao));
+        return view('dashboard.facilitador.campanha.criar', compact('instituicao', $instituicao));
     }
 
     public function editar(Request $request, $id) {
@@ -66,7 +68,7 @@ class CampanhaController extends Controller
         return Campanha::where('facilitador_id', Auth::user()->id); 
     }
 
-    private function listarParticipantes() {
-        return Participante::where('facilitador_id', Auth::user()->id); 
+    public function listarParticipantes() {
+        return User::where('criador_id', Auth::user()->id)->get(); 
     }
 }

@@ -59,9 +59,9 @@ class ParticipanteController extends Controller
 
     public function editar(Request $request, $id) {
         $instituicao = User::find($id);
-        $instituicao->nome        = $request->nome;
+        $instituicao->name        = $request->name;
         $instituicao->nick = $request->nick;
-        $instituicao->senha    = $request->senha;
+        $instituicao->password    = $request->password;
         $instituicao->data_nascimento       = $request->data_nascimento;
         $instituicao->genero       = $request->genero;
         $instituicao->save();
