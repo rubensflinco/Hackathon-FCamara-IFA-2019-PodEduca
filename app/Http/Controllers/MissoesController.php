@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Missoes;
-use App\Poder;
 use Illuminate\Http\Request;
+use View;
 
 class MissoesController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
-        // $this->middleware('verificar.usuario.admin');
+        $this->middleware('verificar.usuario.admin');
     }
     
     public function index(Request $request) {
@@ -25,8 +25,7 @@ class MissoesController extends Controller
 
     public function cadastrarForm() {
         $missoes = new Missoes();
-        $poderes = Poder::all();
-        return view("dashboard.admin.missoes.cadastrar", compact('missoes', $missoes), compact('poderes', $poderes));
+        return view("dashboard.admin.missoes.cadastrar", compact('missoes', $missoes));
     }
 
     public function cadastrar(Request $request) {
@@ -47,8 +46,7 @@ class MissoesController extends Controller
 
     public function editarForm($id) {
         $missoes = Missoes::find($id);
-        $poderes = Poder::all();
-        return view('dashboard.admin.missoes.cadastrar', compact('missoes', $missoes), compact('poderes', $poderes));
+        return view('dashboard.admin.missoes.cadastrar', compact('missoes', $missoes));
     }
 
     public function editar(Request $request, $id) {
@@ -60,12 +58,7 @@ class MissoesController extends Controller
         return redirect()->route('missoes.listar');
     }
 
-    public function listar() {
-        return Missoes::get(); 
-    }
-
-    public function listarJSON($id) {
-        $teste = Missoes::where('poder_id', $id)->get();
-        return $teste; 
+    private function listar() {
+        return Missoes::all(); 
     }
 }

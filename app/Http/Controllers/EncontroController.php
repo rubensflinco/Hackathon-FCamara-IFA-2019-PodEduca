@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Encontro;
-use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class EncontroController extends Controller
 {
@@ -23,12 +21,6 @@ class EncontroController extends Controller
     }
 
     public function index() {
-        // $usuarios = $this->listar();
-        $usuarios = null;
-        return view('dashboard.facilitador.encontro.listar', compact('usuarios', $usuarios));
-    }
-
-    public function listarUserJSON() {
-        return User::where('criador_id', Auth::user()->id)->get();
+        return view('dashboard.facilitador.encontro.listar');
     }
 }

@@ -33,4 +33,28 @@
         </div>
     </div>
 </div>
+<script>
+    let formData = new FormData();
+        $.ajax({
+            type: 'GET',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            body: formData,
+            url: `/dashboard/campanha/listarUsuarios`,
+            success: function(data) {
+                let html = '';
+                $.each(data, function(i, item) {
+                    html += (`<option id="${item['id']}" value="AL">${item['name']}</option>`);
+                });
+                $('#userSelect').html(html);
+                $('.ativeState2').select2();
+                $(".ativeState2").change(function() {
+                    console.log(this);
+                    // alert( "Handler for .change() called." );
+                });
+                $('#userSelect').select2({ placeholder: "Selecione os participantes da campanha" });
+            }
+        });
+</script>
 @endsection
