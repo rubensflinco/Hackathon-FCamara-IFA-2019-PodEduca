@@ -18,7 +18,6 @@ class RankingController extends Controller
 
         return view('dashboard.participante.ranking',  compact('participantes', $participantes));
     }
-
     
     private function listar() {
         return User::query()

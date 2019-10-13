@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Missoes;
+use App\Poder;
 use Illuminate\Http\Request;
 
 class MissoesController extends Controller
@@ -24,7 +25,8 @@ class MissoesController extends Controller
 
     public function cadastrarForm() {
         $missoes = new Missoes();
-        return view("dashboard.admin.missoes.cadastrar", compact('missoes', $missoes));
+        $poderes = Poder::all();
+        return view("dashboard.admin.missoes.cadastrar", compact('missoes', $missoes), compact('poderes', $poderes));
     }
 
     public function cadastrar(Request $request) {
@@ -45,7 +47,8 @@ class MissoesController extends Controller
 
     public function editarForm($id) {
         $missoes = Missoes::find($id);
-        return view('dashboard.admin.missoes.cadastrar', compact('missoes', $missoes));
+        $poderes = Poder::all();
+        return view('dashboard.admin.missoes.cadastrar', compact('missoes', $missoes), compact('poderes', $poderes));
     }
 
     public function editar(Request $request, $id) {

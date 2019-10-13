@@ -28,7 +28,7 @@
             <tr>
               <th scope="row">{{ $missao->id }}</th>
               <td>{{ $missao->nome }}</td>
-              <td>{{ $missao->descricao }}</td>
+              <td>{{ substr($missao->descricao, 0, 90) }}</td>
               <td class="text-center">
 
               <form style="display: inline" method="post" action="/dashboard/missoes/editar/{{ $missao->id }}">

@@ -14,32 +14,38 @@
       </ol>
 
 
-      <div class="row">
-          
-        <div class="col-md-3 col-xs-6">
+      <div class="container">
           <div class="center-img">
-            <img src="{{ asset('img/perfil.png') }}" alt="Avatar" class="img-circle" width="100px">
+            <img src="{{ asset('img/perfil.png') }}" alt="Avatar" class="img-circle" width="70px">
+            <h4>{{ $perfil->name }}</h4>
+            <h6>{{ ucfirst($perfil->grupo) }}</h6>
+          </div>
+      </div>
+
+      <br/>
+
+      <div class="row">
+
+        <div class="col-md-2 col-xs-0"></div>
+
+        <div class="col-md-3 col-xs-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <i class="fa fa-tag" aria-hidden="true"></i> Nick:
+            </div>
+            <div class="panel-body">
+                {{ $perfil->nick }}
+            </div>
           </div>
         </div>
 
         <div class="col-md-3 col-xs-6">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <i class="fa fa-tag" aria-hidden="true"></i> Nome:
+              <i class="fa fa-transgender-alt" aria-hidden="true"></i> Gênero:
             </div>
             <div class="panel-body">
-                {{ $perfil->name }}
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-xs-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <i class="fa fa-group" aria-hidden="true"></i> Grupo:
-            </div>
-            <div class="panel-body">
-                {{ $perfil->grupo }}
+                {{ ucfirst($perfil->genero) }}
             </div>
           </div>
         </div>
@@ -55,33 +61,20 @@
           </div>
         </div>
 
-
       </div>
 
+      <h3>Poderes: </h3>
       <hr/><br/>
 
-      @php $idCarousel = rand(1,1000) @endphp
-      @include('layouts.carousel.carousel', ['local' => 'top', 'id' => $idCarousel])
+      @foreach ($poderes as $poder)
+        <div class="col-md-3 col-xs-6">
+          <a href="/dashboard/poder/{{$poder->id}}" class="center-img poderes-perfil">
+            <img src="{{ $poder->icone_url }}" class="img-circle img-crop" width="70px" height="70px">
+            <h4>{{ $poder->nome }}</h4>
+          </a>
+        </div>
+      @endforeach
 
-        @include('layouts.carousel.thumbnail.thumbnail', [
-          'classItem' => 'active',
-          'titulo' => '',
-          'img' => asset('img/ifa-artes/poderes/Cards_frente-01.jpg'),
-          'descricao' => 'Quem tem o porder se vira sozinho sabe que as pessoas donas de si querem abrir seus próprios caminhos, dar seus proprios... LEIA MAIS',
-          'link' => '/dashboard/poder/1'
-        ])
-        
-
-        @include('layouts.carousel.thumbnail.thumbnail', [
-          'classItem' => ' ',
-          'titulo' => '',
-          'img' => asset('img/ifa-artes/poderes/Cards_frente-02.jpg'),
-          'descricao' => 'Quem tem o poder do líder sabe respeitar, estimular e motivar as pessoas e por isso é respeitado e admirado por todos. LEIA MAIS',
-          'link' => '/dashboard/poder/2'
-        ])
-      
-      @include('layouts.carousel.carousel', ['local' => 'bottom', 'id' => $idCarousel])
-      
     </div>
   </div>
 </div>
