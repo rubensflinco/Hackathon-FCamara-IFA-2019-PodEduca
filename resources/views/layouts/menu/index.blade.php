@@ -25,9 +25,15 @@
           <a href="/dashboard/participante/listar">
             <i class="fa fa-users " aria-hidden="true"></i><span>Participantes</span>
           </a>
+          <a href="/dashboard/encontro/listar">
+            <i class="fa fa-thumb-tack " aria-hidden="true"></i><span>Encontro</span>
+          </a>
           @break
       
       @case("participante")
+          <a href="/dashboard/participante/ranking">
+            <i class="fa fa-trophy" aria-hidden="true"></i><span>Ranking</span>
+          </a>
           <a href="/dashboard/missoes">
             <i class="fa fa-flag-checkered " aria-hidden="true"></i><span>Missões</span>
           </a>
