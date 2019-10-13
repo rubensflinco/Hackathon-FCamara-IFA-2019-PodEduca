@@ -59,6 +59,15 @@ Route::delete('/dashboard/participante/remover/{id}', 'ParticipanteController@re
 //Rotas para Admin
 
 //Rotas para instituição
+Route::get('/dashboard/poder/cadastrar', 'PoderController@cadastrarForm')->name('poder.cadastrar');
+Route::post('/dashboard/poder/cadastrar', 'PoderController@cadastrar');
+Route::get('/dashboard/poderes', 'PoderController@index')->name('poder.listar');
+Route::get('/dashboard/poder/listar', 'PoderController@index')->name('poder.listar');
+Route::delete('/dashboard/poder/remover/{id}', 'PoderController@remover');
+Route::get('/dashboard/poder/editar/{id}', 'PoderController@editarForm');
+Route::post('/dashboard/poder/editar/{id}', 'PoderController@editar');
+
+//Rotas para instituição
 Route::get('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrarForm')->name('instituicao.cadastrar');
 Route::post('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrar');
 Route::get('/dashboard/instituicao/listar', 'InstituicaoController@index')->name('instituicao.listar');
@@ -78,3 +87,11 @@ Route::post('/dashboard/campanha/editar/{id}', 'CampanhaController@editar');
 
 
 
+//Rotas para missão
+Route::get('/dashboard/missoes/cadastrar', 'MissoesController@cadastrarForm')->name('missoes.cadastrar');
+Route::post('/dashboard/missoes/cadastrar', 'MissoesController@cadastrar');
+Route::get('/dashboard/missoes/listar', 'MissoesController@index')->name('missoes.listar');
+Route::delete('/dashboard/missoes/remover/{id}', 'MissoesController@remover');
+Route::get('/dashboard/missoes/editar/{id}', 'MissoesController@editarForm');
+Route::post('/dashboard/missoes/editar/{id}', 'MissoesController@editar');
+//rotas para admin

@@ -3,7 +3,9 @@
   <div class="center-img" onclick="window.location.href = '/dashboard/perfil';" style="cursor: pointer;">
     <br/>
     <img class="menu-foto img-circle text-center" src="{{ asset('img/perfil.png') }}" alt="Avatar." width="50%" />
-    <br/><br/>
+    <br/>
+    <h4>{{@Auth::user()->name}}</h4>
+    <br/>
   </div>
     <a href="/dashboard">
       <i class="fa fa-home " aria-hidden="true"></i><span>Home</span>
