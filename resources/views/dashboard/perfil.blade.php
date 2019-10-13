@@ -28,7 +28,7 @@
               <i class="fa fa-tag" aria-hidden="true"></i> Nome:
             </div>
             <div class="panel-body">
-                {{@Auth::user()->name}}
+                {{ $perfil->name }}
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@
               <i class="fa fa-group" aria-hidden="true"></i> Grupo:
             </div>
             <div class="panel-body">
-                {{@Auth::user()->grupo}}
+                {{ $perfil->grupo }}
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@
               <i class="fa fa-calendar" aria-hidden="true"></i> Data de nascimento:
             </div>
             <div class="panel-body">
-                {{@Auth::user()->data_nascimento}}
+                {{ $perfil->data_nascimento }}
             </div>
           </div>
         </div>
@@ -60,6 +60,27 @@
 
       <hr/><br/>
 
+      @php $idCarousel = rand(1,1000) @endphp
+      @include('layouts.carousel.carousel', ['local' => 'top', 'id' => $idCarousel])
+
+        @include('layouts.carousel.thumbnail.thumbnail', [
+          'classItem' => 'active',
+          'titulo' => '',
+          'img' => asset('img/ifa-artes/poderes/Cards_frente-01.jpg'),
+          'descricao' => 'Quem tem o porder se vira sozinho sabe que as pessoas donas de si querem abrir seus próprios caminhos, dar seus proprios... LEIA MAIS',
+          'link' => '/dashboard/poder/1'
+        ])
+        
+
+        @include('layouts.carousel.thumbnail.thumbnail', [
+          'classItem' => ' ',
+          'titulo' => '',
+          'img' => asset('img/ifa-artes/poderes/Cards_frente-02.jpg'),
+          'descricao' => 'Quem tem o poder do líder sabe respeitar, estimular e motivar as pessoas e por isso é respeitado e admirado por todos. LEIA MAIS',
+          'link' => '/dashboard/poder/2'
+        ])
+      
+      @include('layouts.carousel.carousel', ['local' => 'bottom', 'id' => $idCarousel])
       
     </div>
   </div>
