@@ -32,18 +32,18 @@ class CampanhaController extends Controller
     }
 
     public function cadastrar(Request $request) {
-        Campanha::create([
-            'nome' => $request->nome,
-            'participante_id' => json_encode($request->participante_id),
-            'facilitador_id' => Auth::user()->id
-        ]);
-        return redirect()->route('campanha.listar');
+        // Campanha::create([
+        //     'nome' => $request->nome,
+        //     'participante_id' => $request->participante_id,
+        // ]);
+            echo $request->userSelect;
+        // return redirect()->route('instituicao.listar');
     }
 
     public function remover($id) {
         $instituicao = Campanha::find($id);
         $instituicao->delete();
-        return redirect()->route('campanha.listar');
+        return redirect()->route('instituicao.listar');
     }
 
     public function editarForm($id) {
@@ -62,7 +62,7 @@ class CampanhaController extends Controller
         $instituicao->localidade       = $request->localidade;
         $instituicao->uf       = $request->uf;
         $instituicao->save();
-        return redirect()->route('campanha.listar');
+        return redirect()->route('instituicao.listar');
     }
 
     private function listar() {

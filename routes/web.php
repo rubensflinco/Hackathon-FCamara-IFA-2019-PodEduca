@@ -57,13 +57,13 @@ Route::delete('/dashboard/participante/remover/{id}', 'ParticipanteController@re
 //Rotas para Admin
 
 //Rotas para poder
-Route::get('/dashboard/poder/cadastrar', 'PoderController@cadastrarForm')->name('poder.cadastrar')->middleware('verificar.usuario.admin');
-Route::post('/dashboard/poder/cadastrar', 'PoderController@cadastrar')->middleware('verificar.usuario.admin');
-Route::get('/dashboard/poderes', 'PoderController@index')->name('poder.listar')->middleware('verificar.usuario.admin');
-Route::get('/dashboard/poder/listar', 'PoderController@index')->name('poder.listar')->middleware('verificar.usuario.admin');
-Route::delete('/dashboard/poder/remover/{id}', 'PoderController@remover')->middleware('verificar.usuario.admin');
-Route::get('/dashboard/poder/editar/{id}', 'PoderController@editarForm')->middleware('verificar.usuario.admin');
-Route::post('/dashboard/poder/editar/{id}', 'PoderController@editar')->middleware('verificar.usuario.admin');
+Route::get('/dashboard/poder/cadastrar', 'PoderController@cadastrarForm')->name('poder.cadastrar');
+Route::post('/dashboard/poder/cadastrar', 'PoderController@cadastrar');
+Route::get('/dashboard/poderes', 'PoderController@index')->name('poder.listar');
+Route::get('/dashboard/poder/listar', 'PoderController@index')->name('poder.listar');
+Route::delete('/dashboard/poder/remover/{id}', 'PoderController@remover');
+Route::get('/dashboard/poder/editar/{id}', 'PoderController@editarForm');
+Route::post('/dashboard/poder/editar/{id}', 'PoderController@editar');
 
 //Rotas para facilitadores
 Route::get('/dashboard/facilitadores/criar', 'FacilitadoresController@cadastrarForm')->name('facilitadores.cadastrar');
@@ -98,17 +98,12 @@ Route::get('/dashboard/missoes/listar', 'MissoesController@index')->name('missoe
 Route::delete('/dashboard/missoes/remover/{id}', 'MissoesController@remover');
 Route::get('/dashboard/missoes/editar/{id}', 'MissoesController@editarForm');
 Route::post('/dashboard/missoes/editar/{id}', 'MissoesController@editar');
-
-Route::get('/dashboard/missoes/listarJSON/{id}', 'MissoesController@listarJSON');
-Route::get('/dashboard/poder/listarJSON', 'PoderController@listarJSON');
-Route::get('/dashboard/encontro/listarUserJSON', 'EncontroController@listarUserJSON');
 //rotas para admin
 
 //Rotas para encontro
 Route::get('/dashboard/encontro/listar', 'EncontroController@index');
 
-
-Route::get('/dashboard/poder/{id}', 'PoderController@perfil');
-
-Route::get('/dashboard/poderes', 'PoderController@participantePoderes')->name('poder.listar');
-Route::get('/dashboard/ranking', 'RankingController@index');
+// rotas para ranking
+Route::get('/dashboard/ranking', function(){
+    return view('dashboard.participante.ranking');
+});

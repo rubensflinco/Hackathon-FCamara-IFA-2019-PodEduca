@@ -31,11 +31,14 @@
           @break
       
       @case("participante")
-          <a href="/dashboard/poderes">
-            <i class="fa fa-fire " aria-hidden="true"></i><span>Poderes</span>
-          </a>
           <a href="/dashboard/ranking">
             <i class="fa fa-trophy" aria-hidden="true"></i><span>Ranking</span>
+          </a>
+          <a href="/dashboard/missoes">
+            <i class="fa fa-flag-checkered " aria-hidden="true"></i><span>Missões</span>
+          </a>
+          <a href="/dashboard/poderes">
+            <i class="fa fa-fire " aria-hidden="true"></i><span>Poderes</span>
           </a>
           @break
           
@@ -66,8 +69,8 @@
           @break
       
       @case("participante")
-          <li><a href="/dashboard/poderes">
-              <i class="button fa fa-flag-checkered fa-2x fa-mobile-3x" aria-hidden="true"></i><p>Poderes</p>
+          <li><a href="/dashboard/missoes">
+              <i class="button fa fa-flag-checkered fa-2x fa-mobile-3x" aria-hidden="true"></i><p>Missões</p>
           </a></li>
           @break
           

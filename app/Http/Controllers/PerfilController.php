@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Poder;
 use Illuminate\Http\Request;
 
 class PerfilController extends Controller
@@ -16,15 +15,12 @@ class PerfilController extends Controller
     
     public function index($id) {
         $perfil = User::find($id);
-        $poderes = Poder::all();
         if($perfil)
-            return view('dashboard.perfil', compact('perfil', $perfil), compact('poderes', $poderes));
+            return view('dashboard.perfil', compact('perfil', $perfil));
         else{
             $error = $perfil;
             return response()->view('errors', compact('error', $error) );
         }
     }
-
-
 
 }

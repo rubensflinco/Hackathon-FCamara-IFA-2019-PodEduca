@@ -20,29 +20,24 @@
           <tr>
             <th>#</th>
             <th>Nome</th>
-            <th>Ranking</th>
             <th>Pontuação</th>
             <th class="text-center">Opções</th>
           </tr>
         </thead>
         
         <tbody>
+          <tr>
+            <th scope="row"> 2 </th>
+            <td> Victor </td>
+            <td> 17 pontos </td>
+            <td class="text-center">
+              
+            <a class="btn btn-info btn-circle" href="/dashboard/perfil/2"> <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
 
-          @php $index = 1; @endphp
-          @foreach ($participantes as $participante)
-            <tr>
-              <th scope="row">{{$participante->id}}</th>
-              <td>{{$participante->name}}</td>
-              <td> {{$index}}</td>
-              <td> {{rand(1,1000)}} pontos </td>
-              <td class="text-center">
-                <a class="btn btn-info btn-circle" href="/dashboard/perfil/{{$participante->id}}"> <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
-              </td>
-            </tr>
-          @php $index++; @endphp
-          @endforeach
-
+          </td>
+          </tr>
         </tbody>
+
       </table>
       
     </div>

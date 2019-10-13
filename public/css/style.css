@@ -264,14 +264,6 @@ h1{
     margin: 5px 0;
 }
 
-.img-crop{
-    object-fit: cover;
-}
-
-.poderes-perfil{
-    margin-bottom: 25px;
-}
-
 @media (max-width: 768px){
     .dashboard{
         padding-bottom: 74px;
