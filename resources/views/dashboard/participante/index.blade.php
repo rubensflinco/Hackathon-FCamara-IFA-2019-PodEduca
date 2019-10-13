@@ -66,7 +66,7 @@
           'classItem' => 'active',
           'titulo' => '',
           'img' => asset('img/ifa-artes/poderes/Cards_frente-01.jpg'),
-          'descricao' => ''
+          'descricao' => 'Quem tem o porder se vira sozinho sabe que as pessoas donas de si querem abrir seus próprios caminhos, dar seus proprios... LEIA MAIS'
         ])
         
 
@@ -74,7 +74,7 @@
           'classItem' => ' ',
           'titulo' => '',
           'img' => asset('img/ifa-artes/poderes/Cards_frente-02.jpg'),
-          'descricao' => ''
+          'descricao' => 'Quem tem o poder do líder sabe respeitar, estimular e motivar as pessoas e por isso é respeitado e admirado por todos. LEIA MAIS'
         ])
       
       @include('layouts.carousel.carousel', ['local' => 'bottom', 'id' => $idCarousel])
