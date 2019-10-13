@@ -11,7 +11,7 @@
 
       <div class="row">
 
-        <div class="col-md-3 col-xs-6">
+        <div class="col-md-3 col-xs-0">
         </div>
 
         <div class="col-md-3 col-xs-6">
