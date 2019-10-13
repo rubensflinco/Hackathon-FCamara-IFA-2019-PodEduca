@@ -37,7 +37,6 @@
     </div>
   </div>
 </div>
-@endsection
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -66,3 +65,5 @@
         });
     });
 </script>
+@endsection
+

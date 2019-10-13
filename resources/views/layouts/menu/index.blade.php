@@ -28,6 +28,9 @@
           @break
       
       @case("participante")
+          <a href="/dashboard/participante/ranking">
+            <i class="fa fa-trophy" aria-hidden="true"></i><span>Ranking</span>
+          </a>
           <a href="/dashboard/missoes">
             <i class="fa fa-flag-checkered " aria-hidden="true"></i><span>Missões</span>
           </a>
