@@ -100,6 +100,8 @@ Route::get('/dashboard/missoes/editar/{id}', 'MissoesController@editarForm');
 Route::post('/dashboard/missoes/editar/{id}', 'MissoesController@editar');
 //rotas para admin
 
+//Rotas para encontro
+Route::get('/dashboard/encontro/lista', 'EncontroController@index');
 
 // rotas para ranking
 Route::get('/dashboard/ranking', function(){

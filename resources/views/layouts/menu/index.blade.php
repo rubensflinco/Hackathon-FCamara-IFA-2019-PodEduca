@@ -25,6 +25,9 @@
           <a href="/dashboard/participante/listar">
             <i class="fa fa-users " aria-hidden="true"></i><span>Participantes</span>
           </a>
+          <a href="/dashboard/encontro/listar">
+            <i class="fa fa-thumb-tack " aria-hidden="true"></i><span>Encontro</span>
+          </a>
           @break
       
       @case("participante")

@@ -46,13 +46,15 @@
             url: `/dashboard/campanha/listarUsuarios`,
             success: function(data) {
                 let html = '';
-                let arrayParticipantes = [];
                 $.each(data, function(i, item) {
-                    html += (`<option value="AL">${item['name']}</option>`);
-                    arrayParticipantes.push(item['id']);
+                    html += (`<option id="${item['id']}" value="AL">${item['name']}</option>`);
                 });
                 $('#userSelect').html(html);
                 $('.ativeState2').select2();
+                $(".ativeState2").change(function() {
+                    console.log(this);
+                    // alert( "Handler for .change() called." );
+                });
             }
         });
 </script>

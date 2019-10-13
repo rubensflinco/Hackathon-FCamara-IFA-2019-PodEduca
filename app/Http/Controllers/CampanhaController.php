@@ -17,12 +17,13 @@ class CampanhaController extends Controller
     }
     
     public function index(Request $request) {
-        //$campanha = $this->listar();
-        $campanha = new Campanha();
+        $campanhas = new Campanha();
+        $campanhas = $this->listar();
+        //echo $campanha;
         $message = $request->session()->get('message');
         $request->session()->remove('message');
 
-        return view("dashboard.facilitador.campanha.listar", compact('campanha', 'message'));
+        return view("dashboard.facilitador.campanha.listar", compact('campanhas', $campanhas));
     }
 
     public function cadastrarForm() {
@@ -35,7 +36,7 @@ class CampanhaController extends Controller
         //     'nome' => $request->nome,
         //     'participante_id' => $request->participante_id,
         // ]);
-            echo $request->participantes;
+            echo $request->userSelect;
         // return redirect()->route('instituicao.listar');
     }
 
@@ -65,7 +66,7 @@ class CampanhaController extends Controller
     }
 
     private function listar() {
-        return Campanha::where('facilitador_id', Auth::user()->id); 
+        return Campanha::where('facilitador_id', Auth::user()->id)->get(); 
     }
 
     public function listarParticipantes() {

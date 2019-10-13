@@ -19,4 +19,8 @@ class EncontroController extends Controller
             // 'uf' => $request->uf,
         ]);
     }
+
+    public function index() {
+        
+    }
 }
