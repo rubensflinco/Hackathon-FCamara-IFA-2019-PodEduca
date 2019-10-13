@@ -31,6 +31,10 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
+Route::get('/dashboard/perfil', function () {
+    return view('dashboard.perfil');
+});
+
 //Rotas para turma
 Route::get('/dashboard/turma/listar', 'TurmaController@index')->name('turma.cadastrar');
 Route::get('/dashboard/turmas', 'TurmaController@index')->name('turma.cadastrar');
