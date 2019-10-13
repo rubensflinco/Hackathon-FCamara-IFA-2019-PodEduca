@@ -6,6 +6,7 @@ use App\Campanha;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Instituicao;
 
 class DashboardController extends Controller
 {
@@ -36,7 +37,27 @@ class DashboardController extends Controller
                 break;
 
             case 'admin':
-                return view('dashboard.admin.index');
+            $instituicoes = Instituicao::query()
+            ->get()
+            ->count();
+
+            $participantes = User::query()
+            ->where('grupo', 'participante')
+            ->get()
+            ->count();
+
+            $facilitadores = User::query()
+            ->where('grupo', 'facilitador')
+            ->get()
+            ->count();
+
+            $campanhas = Campanha::query()
+            ->get()
+            ->count();
+
+            $compact = array($instituicoes, $participantes, $facilitadores, $campanhas);
+            
+                return view('dashboard.admin.index', compact('compact', $compact));
                 break;
             
             default:

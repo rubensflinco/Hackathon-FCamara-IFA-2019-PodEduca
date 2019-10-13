@@ -7,7 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>PodEduca</title>
+    <link href="{{asset('img/logo-podeduca-laranja.png')}}" rel="shortcut icon">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
