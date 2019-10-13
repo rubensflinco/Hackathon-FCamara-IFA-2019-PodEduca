@@ -54,13 +54,13 @@
 
        @switch(Auth::user()->grupo)
       @case("admin")
-          <li><a href="/dashboard/instituicoes">
+          <li><a href="/dashboard/instituicao/listar">
               <i class="button fa fa-building-o fa-2x fa-mobile-3x" aria-hidden="true"></i><p>Instituições</p>
           </a></li>
           @break
 
       @case("facilitador")
-          <li><a href="/dashboard/campanha">
+          <li><a href="/dashboard/campanha/listar">
               <i class="button fa fa-bullhorn fa-2x fa-mobile-3x" aria-hidden="true"></i><p>Campanha</p>
           </a></li>
           @break
