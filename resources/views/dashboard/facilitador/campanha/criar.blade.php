@@ -22,13 +22,10 @@
             <div class="col-md-6 col-md-offset-3">
                 <form method="POST" class="form form-black center-img">
                     @csrf
-                    <input value="{{ $campanha->nome }}" type="text" name="nome" id="nome" class="form-control" placeholder="Digite o nome">
+                    <input value="{{ $campanha->nome }}" type="text" name="nome" id="nome" class="form-control" placeholder="Digite o nome da campanha">
                     <div id="checkbox">
                     </div>
-                    <select value="{{ $campanha->participante_id }}" id="participante_id" name="participante_id" class="form-control">
-                        <option value="null">Digite genero</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="ferminino">Feminino</option>
+                    <select id="userSelect" class="ativeState2 form-control" name="states[]" multiple="multiple">
                     </select>
                     <button id="name">chamar</button>
                     <button type="submit" class="btn btn-warning btn-lg">Cadastrar</button>
@@ -51,14 +48,11 @@
                 let html = '';
                 let arrayParticipantes = [];
                 $.each(data, function(i, item) {
-                    html += (`
-                                <input type="checkbox" name="participantes">
-                                <label for="participantes">${item['name']}</label>
-                            `);
-                    arrayParticipantes.push(${item['id']});
+                    html += (`<option value="AL">${item['name']}</option>`);
+                    arrayParticipantes.push(item['id']);
                 });
-                $('#checkbox').html(html);
-                console.log(data[0]['name']);
+                $('#userSelect').html(html);
+                $('.ativeState2').select2();
             }
         });
 </script>
