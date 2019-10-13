@@ -11,7 +11,6 @@ class PoderController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('verificar.usuario.admin');
     }
     
     public function index(Request $request) {
@@ -60,5 +59,10 @@ class PoderController extends Controller
 
     private function listar() {
         return Poder::all(); 
+    }
+
+    public function listarJSON() {
+        $teste = Poder::all();
+        return $teste; 
     }
 }

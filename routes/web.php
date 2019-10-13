@@ -98,6 +98,10 @@ Route::get('/dashboard/missoes/listar', 'MissoesController@index')->name('missoe
 Route::delete('/dashboard/missoes/remover/{id}', 'MissoesController@remover');
 Route::get('/dashboard/missoes/editar/{id}', 'MissoesController@editarForm');
 Route::post('/dashboard/missoes/editar/{id}', 'MissoesController@editar');
+
+Route::get('/dashboard/missoes/listarJSON/{id}', 'MissoesController@listarJSON');
+Route::get('/dashboard/poder/listarJSON', 'PoderController@listarJSON');
+Route::get('/dashboard/encontro/listarUserJSON', 'EncontroController@listarUserJSON');
 //rotas para admin
 
 //Rotas para encontro
