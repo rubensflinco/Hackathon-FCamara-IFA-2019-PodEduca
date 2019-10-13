@@ -99,3 +99,9 @@ Route::delete('/dashboard/missoes/remover/{id}', 'MissoesController@remover');
 Route::get('/dashboard/missoes/editar/{id}', 'MissoesController@editarForm');
 Route::post('/dashboard/missoes/editar/{id}', 'MissoesController@editar');
 //rotas para admin
+
+
+// rotas para ranking
+Route::get('/dashboard/ranking', function(){
+    return view('dashboard.participante.ranking');
+});
