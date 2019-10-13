@@ -36,6 +36,7 @@
     $(document).ready(function(){
         setTimeout(() => {
             $(".splash").css({"opacity":"0", "transition":"1s"});
+            setTimeout(() => {$(".splash").css({"display": "none"});}, 1000);
         }, 1500);
     });
 </script>
