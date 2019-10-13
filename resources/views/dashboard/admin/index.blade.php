@@ -17,7 +17,7 @@
               <i class="fa fa-building-o" aria-hidden="true"></i> Instituições:
             </div>
             <div class="panel-body">
-                {Numero}
+                {{ $compact[0] }}
             </div>
           </div>
         </div>
@@ -28,7 +28,8 @@
               <i class="fa fa-users" aria-hidden="true"></i> Participantes:
             </div>
             <div class="panel-body">
-                {Numero}
+                {{ $compact[1] }}
+
             </div>
           </div>
         </div>
@@ -39,7 +40,8 @@
               <i class="fa fa-users" aria-hidden="true"></i> Facilitadores:
             </div>
             <div class="panel-body">
-                {Numero}
+                {{ $compact[2] }}
+
             </div>
           </div>
         </div>
@@ -50,7 +52,8 @@
               <i class="fa fa-bullhorn" aria-hidden="true"></i> Campanhas:
             </div>
             <div class="panel-body">
-                {Numero}
+                {{ $compact[3] }}
+
             </div>
           </div>
         </div>
