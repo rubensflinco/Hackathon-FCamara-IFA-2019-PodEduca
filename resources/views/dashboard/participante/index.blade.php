@@ -10,6 +10,9 @@
       <hr/><br/>
 
       <div class="row">
+
+        <div class="col-md-3 col-xs-6">
+        </div>
           
         <div class="col-md-3 col-xs-6">
           <div class="panel panel-default">
@@ -17,7 +20,7 @@
               <i class="fa fa-trophy" aria-hidden="true"></i> Ranking:
             </div>
             <div class="panel-body">
-                {Numero da posição}
+                {{rand(1,100)}}
             </div>
           </div>
         </div>
@@ -28,36 +31,12 @@
               <i class="fa fa-gamepad" aria-hidden="true"></i> Pontos:
             </div>
             <div class="panel-body">
-                {Numero da posição}
+                {{rand(1,1000)}}
             </div>
           </div>
         </div>
 
-        <div class="col-md-3 col-xs-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <i class="fa fa-flag-checkered" aria-hidden="true"></i> Missões:
-            </div>
-            <div class="panel-body">
-                {Numero da posição}
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-xs-6">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <i class="fa fa-fire" aria-hidden="true"></i> Poder:
-            </div>
-            <div class="panel-body">
-                {Numero da posição}
-            </div>
-          </div>
-        </div>
-        
       </div>
-
-      <hr/><br/>
 
       
     </div>
