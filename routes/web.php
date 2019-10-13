@@ -66,6 +66,11 @@ Route::get('/dashboard/instituicao/editar/{id}', 'InstituicaoController@editarFo
 Route::post('/dashboard/instituicao/editar/{id}', 'InstituicaoController@editar');
 //Rotas para facilitadores
 
-
-
-
+//Rotas para missão
+Route::get('/dashboard/missoes/cadastrar', 'MissoesController@cadastrarForm')->name('missoes.cadastrar');
+Route::post('/dashboard/missoes/cadastrar', 'MissoesController@cadastrar');
+Route::get('/dashboard/missoes/listar', 'MissoesController@index')->name('missoes.listar');
+Route::delete('/dashboard/missoes/remover/{id}', 'MissoesController@remover');
+Route::get('/dashboard/missoes/editar/{id}', 'MissoesController@editarForm');
+Route::post('/dashboard/missoes/editar/{id}', 'MissoesController@editar');
+//rotas para admin
