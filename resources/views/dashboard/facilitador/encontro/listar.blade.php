@@ -8,11 +8,15 @@
     <div class="container">
       <ol class="breadcrumb fundo-transparente">
         <li><a href="/">Home</a></li>
-        <li class="active">q</li>
+        <li class="active">Encontro</li>
         @csrf
         <a class="btn btn-warning btn-md pull-right" href="/dashboard/campanha/criar">Cadastrar campanha</a>
         <br /><br />
       </ol>
+
+
+      
+
       <div class="form-black">
         <input class="form-control" type="date">
       </div>
