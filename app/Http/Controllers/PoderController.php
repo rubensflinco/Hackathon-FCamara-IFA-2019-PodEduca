@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Poder;
+use App\Missoes;
 use Illuminate\Http\Request;
 
 class PoderController extends Controller
@@ -11,7 +12,6 @@ class PoderController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('verificar.usuario.admin');
     }
     
     public function index(Request $request) {
@@ -21,6 +21,12 @@ class PoderController extends Controller
         $request->session()->remove('message');
 
         return view("dashboard.admin.poderes.listar", compact('poderes', 'message'));
+    }
+
+    public function participantePoderes(Request $request) {
+        $poderes = $this->listar();
+
+        return view("dashboard.participante.poderes", compact('poderes', 'poderes'));
     }
 
     public function cadastrarForm() {
@@ -56,6 +62,12 @@ class PoderController extends Controller
         $Poder->icone_url      = $request->icone_url;
         $Poder->save();
         return redirect()->route('poder.listar');
+    }
+
+    public function perfil($id) {
+        $poder = Poder::find($id);
+        $missoes = Missoes::where('poder_id', $id)->get();
+        return view('dashboard.participante.poder', compact('poder', $poder), compact('missoes', $missoes));
     }
 
     private function listar() {
