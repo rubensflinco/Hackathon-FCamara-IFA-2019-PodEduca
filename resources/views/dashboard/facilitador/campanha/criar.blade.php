@@ -22,16 +22,11 @@
             <div class="col-md-6 col-md-offset-3">
                 <form method="POST" class="form form-black center-img">
                     @csrf
-                    <input value="{{ $campanha->nome }}" type="text" name="nome" id="nome" class="form-control" placeholder="Digite o nome">
-                    <div id="checkbox">
-                    </div>
-                    <select value="{{ $campanha->participante_id }}" id="participante_id" name="participante_id" class="form-control">
-                        <option value="null">Digite genero</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="ferminino">Feminino</option>
+                    <input value="{{ $campanha->nome }}" type="text" name="nome" id="nome" class="form-control" placeholder="Digite o nome da campanha">
+                    <select id="userSelect" class="form-control" name="states[]" multiple="multiple">
                     </select>
-                    <button id="name">chamar</button>
-                    <button type="submit" class="btn btn-warning btn-lg">Cadastrar</button>
+                    <br/><br/>
+                    <button type="submit" class="btn btn-warning btn-lg">Confirmar</button>
                 </form>
             </div>
 
@@ -49,16 +44,16 @@
             url: `/dashboard/campanha/listarUsuarios`,
             success: function(data) {
                 let html = '';
-                let arrayParticipantes = [];
                 $.each(data, function(i, item) {
-                    html += (`
-                                <input type="checkbox" name="participantes">
-                                <label for="participantes">${item['name']}</label>
-                            `);
-                    arrayParticipantes.push(${item['id']});
+                    html += (`<option id="${item['id']}" value="AL">${item['name']}</option>`);
                 });
-                $('#checkbox').html(html);
-                console.log(data[0]['name']);
+                $('#userSelect').html(html);
+                $('.ativeState2').select2();
+                $(".ativeState2").change(function() {
+                    console.log(this);
+                    // alert( "Handler for .change() called." );
+                });
+                $('#userSelect').select2({ placeholder: "Selecione os participantes da campanha" });
             }
         });
 </script>

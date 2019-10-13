@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Campanha;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class DashboardController extends Controller
 {
@@ -19,9 +21,20 @@ class DashboardController extends Controller
                 break;
             
             case 'facilitador':
-                return view('dashboard.facilitador.index');
+            $participantes = User::query()
+            ->where('criador_id', Auth::user()->id)
+            ->get()
+            ->count();
+
+            $campanha = Campanha::query()
+            ->where('facilitador_id', Auth::user()->id)
+            ->get()
+            ->count();
+
+            $compact = array($participantes, $campanha);
+                return view('dashboard.facilitador.index', compact('compact', $compact));
                 break;
-            
+
             case 'admin':
                 return view('dashboard.admin.index');
                 break;

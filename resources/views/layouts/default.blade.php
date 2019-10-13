@@ -60,6 +60,7 @@
 <script>
   closeNavMobile();
   AtivarCarouselMulti();
+  $('.ativeState2').select2();
 </script>
 
 </html>
