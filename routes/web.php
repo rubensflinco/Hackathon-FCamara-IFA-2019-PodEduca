@@ -23,11 +23,6 @@ Route::get('/', 'Auth\LoginController@index')->name('login');
 Route::post('/', 'Auth\LoginController@login')->name('login');
 Route::get('/login', function () { return view('login.index'); });
 
-Route::get('/register', function () {
-    // return view('login.index');
-    return view('auth.register');
-});
-
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::get('/dashboard/perfil', function () {
@@ -56,6 +51,14 @@ Route::get('/dashboard/participante/editar/{id}', 'ParticipanteController@editar
 Route::post('/dashboard/participante/editar/{id}', 'ParticipanteController@editar');
 
 //Rotas para Admin
+
+//Rotas para instituição
+Route::get('/dashboard/poder/cadastrar', 'PoderController@cadastrarForm')->name('poder.cadastrar');
+Route::post('/dashboard/poder/cadastrar', 'PoderController@cadastrar');
+Route::get('/dashboard/poder/listar', 'PoderController@index')->name('poder.listar');
+Route::delete('/dashboard/poder/remover/{id}', 'PoderController@remover');
+Route::get('/dashboard/poder/editar/{id}', 'PoderController@editarForm');
+Route::post('/dashboard/poder/editar/{id}', 'PoderController@editar');
 
 //Rotas para instituição
 Route::get('/dashboard/instituicao/cadastrar', 'InstituicaoController@cadastrarForm')->name('instituicao.cadastrar');
