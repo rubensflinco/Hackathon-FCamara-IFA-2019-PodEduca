@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Participante;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -68,17 +67,7 @@ class LoginController extends Controller
                 $this->makeMessages($request, "Não foi possível realizar o login, verifique os dados");
                 return redirect()->route('login');
             } else {
-                $userData = Participante::where('nick', $nick)->first();
-                if ($userData != null) {
-                    if ($userData && Hash::check($password, $userData->senha)) {
-                        $credentials = Input::only('nick', 'password');
-                        if (Auth::attempt($credentials)) {
-                            return redirect()->route('dashboard');
-                        }
-                        $this->makeMessages($request, "passou");
-                    }
-                    return redirect()->route('login');
-                }
+                
                 $this->makeMessages($request, "Nick não cadastrado");
                 return redirect()->route('login');
             }

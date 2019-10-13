@@ -7,7 +7,7 @@
           <a href="/dashboard/poderes">
             <i class="fa fa-fire " aria-hidden="true"></i><span>Poderes</span>
           </a>
-          <a href="/dashboard/missoes">
+          <a href="/dashboard/missoes/listar">
             <i class="fa fa-flag-checkered " aria-hidden="true"></i><span>Missões</span>
           </a>
           <a href="/dashboard/facilitadores/listar">
@@ -19,7 +19,7 @@
           @break
 
       @case("facilitador")
-          <a href="/dashboard/campanha">
+          <a href="/dashboard/campanha/listar">
             <i class="fa fa-bullhorn " aria-hidden="true"></i><span>Campanha</span>
           </a>
           <a href="/dashboard/participante/listar">
