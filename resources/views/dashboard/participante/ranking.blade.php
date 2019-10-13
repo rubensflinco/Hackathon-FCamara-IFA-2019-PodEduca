@@ -26,18 +26,19 @@
         </thead>
         
         <tbody>
-          <tr>
-            <th scope="row"> 2 </th>
-            <td> Victor </td>
-            <td> 17 pontos </td>
-            <td class="text-center">
-              
-            <a class="btn btn-info btn-circle" href="/dashboard/perfil/2"> <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
 
-          </td>
-          </tr>
+          @foreach ($participantes as $participante)
+            <tr>
+              <th scope="row">{{$participante->id}}</th>
+              <td>{{$participante->name}}</td>
+              <td> {{rand(1,100)}} pontos </td>
+              <td class="text-center">
+                <a class="btn btn-info btn-circle" href="/dashboard/perfil/{{$participante->id}}"> <i class="fa fa-angle-double-right" aria-hidden="true"></i> </a>
+              </td>
+            </tr>
+          @endforeach
+
         </tbody>
-
       </table>
       
     </div>

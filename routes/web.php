@@ -103,11 +103,8 @@ Route::post('/dashboard/missoes/editar/{id}', 'MissoesController@editar');
 //Rotas para encontro
 Route::get('/dashboard/encontro/listar', 'EncontroController@index');
 
-// rotas para ranking
-Route::get('/dashboard/ranking', function(){
-    return view('dashboard.participante.ranking');
-});
-
 
 Route::get('/dashboard/poder/{id}', 'PoderController@perfil');
+
 Route::get('/dashboard/poderes', 'PoderController@participantePoderes')->name('poder.listar');
+Route::get('/dashboard/ranking', 'RankingController@index');
