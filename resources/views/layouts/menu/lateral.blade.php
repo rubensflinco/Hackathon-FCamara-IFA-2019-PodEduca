@@ -1,6 +1,6 @@
 <div>
   <div id="menu-mySidenav" class="menu-sidenav">
-  <div class="center-img" onclick="window.location.href = '/dashboard/perfil';" style="cursor: pointer;">
+  <div class="center-img" onclick="window.location.href = '/dashboard/perfil/{{ @Auth::user()->id }}';" style="cursor: pointer;">
     <br/>
     <img class="menu-foto img-circle text-center" src="{{ asset('img/perfil.png') }}" alt="Avatar." width="50%" />
     <br/>
@@ -13,7 +13,7 @@
 
     @yield('conteudo.menu.lateral')
 
-    <a href="/dashboard/perfil">
+    <a href="/dashboard/perfil/{{ @Auth::user()->id }}">
       <i class="fa fa-user " aria-hidden="true"></i><span>Perfil</span>
     </a>
 

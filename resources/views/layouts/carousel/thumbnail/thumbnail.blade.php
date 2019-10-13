@@ -2,7 +2,7 @@
     <div class="carousel-col">
 
         <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="thumbnail">
+            <div class="thumbnail" onclick="window.location.href = '{{$link}}';" style="cursor: pointer;">
             <img class="img-responsive" src="{{$img}}" />
                 <div class="caption">
                     @if ($titulo)
