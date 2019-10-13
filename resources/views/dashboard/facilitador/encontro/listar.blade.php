@@ -89,8 +89,8 @@
         let aux = `<tr>
           <td>${item['id']}</td>
           <td>${item['name']}</td>
-          <td><div class="form-black">${poderes}</div></td>
-          <td><div class="form-black"><select id="${item['id']}" name="missao" class="form-control adicionar-options"><option>Selecione uma missão</option></select></div></td>
+          <td class="form-black">${poderes}</td>
+          <td class="form-black"><select id="${item['id']}" name="missao" class="form-control adicionar-options"><option>Selecione uma missão</option></select></td>
           </tr>`
           $('#jsInput').append(aux);
           // missoes += (`<option id="${item['id']}" value="${item['id']}">${item['nome']}</option>`);
