@@ -208,6 +208,24 @@ h1{
     background-color: rgb(255, 255, 255) !important;
 }
 
+.splash{
+    align-items: center;
+    background-color: #f16227;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.splash img{
+    margin: 5px 0;
+}
+
 @media (max-width: 768px){
     .dashboard{
         padding-bottom: 74px;
