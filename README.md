@@ -24,10 +24,10 @@ PodEduca é uma solução em aplicativo com 3 niveis de usuarios e te permite ac
 <img src="https://i.imgur.com/dGMsyT2.png" align="left" width="250px">
 <img src="https://i.imgur.com/upoUv0c.png" align="left" width="250px">
 <img src="https://i.imgur.com/CofkSoN.png" align="left" width="250px">
-<img src="https://i.imgur.com/n5aSZWc.png" align="left" width="250px">
 <img src="https://i.imgur.com/KnkP3Af.png" align="left" width="250px">
 <img src="https://i.imgur.com/PNgNnfK.png" align="left" width="250px">
-<img src="https://i.imgur.com/gDxsFzr.png" align="left" width="250px">
 <img src="https://i.imgur.com/365pkZw.png" align="left" width="250px">
 <img src="https://i.imgur.com/6WsFTkN.png" align="left" width="250px">
 <img src="https://i.imgur.com/sE1CZpJ.png" align="left" width="250px">
+<img src="https://i.imgur.com/n5aSZWc.png" align="left" width="250px">
+<img src="https://i.imgur.com/gDxsFzr.png" align="left" width="250px">
