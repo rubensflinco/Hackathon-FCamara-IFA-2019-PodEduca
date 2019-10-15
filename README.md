@@ -16,6 +16,8 @@ PodEduca é uma solução em aplicativo com 3 niveis de usuarios e te permite ac
 
 
 # Projeto:
+<a href="https://docs.google.com/presentation/d/1OU6IxLznXCe-s9VPVBo7QnRGVE_A6nhTw1AaeLdtdKo/edit?usp=sharing">Veja nossa apresentação de slide >></a>
+<br/><br/>
 <img src="https://i.imgur.com/6DCZWV3.png">
 <br>
 <hr>
