@@ -5,7 +5,7 @@ PodEduca é uma solução em aplicativo com 3 niveis de usuarios e te permite ac
 
 # Equipe PodEduca:
 <br/>
-<a href="https://github.com/JotinhaBR">Rubens Flinco</a>, <a href="https://github.com/joaovifonseca">João Vitor</a>, <a href="https://github.com/Luukitas">Lucas Cabral</a>, <a href="https://github.com/giocarvalho07">Giovanni Carvalho</a>.
+<a href="https://github.com/rubensflinco">Rubens Flinco</a>, <a href="https://github.com/joaovifonseca">João Vitor</a>, <a href="https://github.com/Luukitas">Lucas Cabral</a>, <a href="https://github.com/giocarvalho07">Giovanni Carvalho</a>.
 
 <br/>
 <br/>
